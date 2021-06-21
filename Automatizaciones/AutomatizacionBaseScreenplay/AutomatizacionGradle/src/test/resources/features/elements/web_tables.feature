@@ -1,5 +1,5 @@
 #language: es
-# encoding: iso-8859-1
+
 
 Característica: Como usuario deseo verificar la funcionalidad de los botones de acción en la tabla contenida en
   Web Tables del módulo Elements

@@ -1,5 +1,5 @@
 #language: es
-# encoding: iso-8859-1
+
 
 Característica: Como usuario deseo verificar del módulo "Alerts, Frame & Windows" la
   funcionalidad "Browser Windows"

@@ -1,5 +1,5 @@
 #language: es
-# encoding: iso-8859-1
+
 
 Característica: Como usuario deseo verificar del módulo
   "Elements" las funcionalidad "Text Box"

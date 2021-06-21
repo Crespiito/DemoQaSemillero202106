@@ -1,5 +1,5 @@
 #language: es
-# encoding: iso-8859-1
+
 
       #Items parte Titulo 1 links
 Característica: Como usuario deseo probar los links de el elemento "Links"

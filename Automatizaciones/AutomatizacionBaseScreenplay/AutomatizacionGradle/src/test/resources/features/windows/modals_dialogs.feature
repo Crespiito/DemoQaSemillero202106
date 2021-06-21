@@ -1,3 +1,5 @@
+#language: es
+
 Característica: Como usuario deseo verificar del módulo "Alerts, Frame & Windows" la
 funcionalidad "Browser Windows"
 

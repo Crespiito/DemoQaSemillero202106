@@ -1,5 +1,5 @@
 #language: es
-# encoding: iso-8859-1
+
 
 Característica: Como usuario deseo verificar la funcionalidad de los botones "Haz clic en mi" de acuerdo a su referencia
   Escenario: Visualización de alerta

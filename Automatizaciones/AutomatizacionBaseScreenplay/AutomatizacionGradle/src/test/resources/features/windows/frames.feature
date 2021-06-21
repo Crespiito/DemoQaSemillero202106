@@ -1,5 +1,5 @@
 #language: es
-  #enconding: iso-8859-1
+
 
   #Item Frames Scroll
 Característica: Como usuario deseo observar y verificar el item "Frames" del elemento Alerts, Frames & Windows

@@ -1,5 +1,5 @@
 #language: es
-# encoding: iso-8859-1
+
 
 Característica: Como usuario deseo verificar la funcionalidad del ítem Radio Button del módulo Elements
   Escenario: Validar que en la lista de Elements aparezca  el ítem Radio Button
@@ -12,9 +12,10 @@ Característica: Como usuario deseo verificar la funcionalidad del ítem Radio B
     Cuando seleccione el ítem Radio Button
     Entonces se le mostrará el contenido de esa sección
 
+
   Escenario: Elija que sí le gusto el sitio
     Dado que el usuario haya leido la pregunta ¿Te gusta el sitio? y decida entre las opciones de respuesta
-    Cuando marque la opción "Si"
+    Cuando marque la opción Afirmativo "Si"
     Entonces podrá ver un mensaje con la opcion seleccionada de la siguiente manera "Has seleccionado Sí"
 
   Escenario: Elija que le impresiona el sitio

@@ -1,66 +1,57 @@
 #language: es
 
+Característica: Como usuario deseo probar los links de el elemento Links
 
-      #Items parte Titulo 1 links
-Característica: Como usuario deseo probar los links de el elemento "Links"
+  Escenario: Comprobar los links de el enunciado Following links will open new tab
 
-  Escenario: Comprobar los links de el enunciado "Following links will open new tab"
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link Home
+    Entonces Me lleva direccionaria a la pagina inicial demoqa
 
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "Home"
-    Entonces Me (lleva) direccionaría a la pagina inicial "demoqa.com"
+  Escenario: Comprobar los links del enunciado Following links will open new tab
 
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link HomeFQTwx
+    Entonces Me lleva direccionaria a la pagina inicial demoqa
 
-  Escenario: Comprobar los links de el enunciado "Following links will open new tab"
+  Escenario: Comprobar los links de el enunciado Following links will send an api call
 
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "HomeFQTwx"
-    Entonces Me (lleva) direccionaría a la pagina inicial "demoqa.com"
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link Created
+    Entonces Me deberia mostrar un mensaje que diga Link has responded with status dos cientos uno and status text Created
 
-      #Items parte Titulo 2 links
+  Escenario: Comprobar los links de el enunciado Following links will send an api call
 
-  Escenario: Comprobar los links de el enunciado "Following links will send an api call"
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link No Content
+    Entonces Me deberia mostrar un mensaje que diga Link has responded with status dos cientos cuatro and status text No Content
 
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "Created"
-    Entonces Me debería mostrar un mensaje que diga "Link has responded with staus 201 and status text Created"
+  Escenario: Comprobar los links de el enunciado Following links will send an api call
 
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link Moved
+    Entonces Me deberia mostrar un mensaje que diga Link has responded with status tres cientos uno and status text Moved Permanently
 
-  Escenario: Comprobar los links de el enunciado "Following links will send an api call"
+  Escenario: Comprobar los links de el enunciado Following links will send an api call
 
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "No Content"
-    Entonces Me debería mostrar un mensaje que diga "Link has responded with staus 204 and status text No Content"
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link Bad Request
+    Entonces Me deberia mostrar un mensaje que diga Link has responded with status cuatro cientos and status text Bad Request
 
+  Escenario: Comprobar los links de el enunciado Following links will send an api call
 
-  Escenario: Comprobar los links de el enunciado "Following links will send an api call"
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link Unauthorized
+    Entonces Me deberia mostrar un mensaje que diga Link has responded with staus cuatro cientos uno and status text Unauthorized
 
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "Moved"
-    Entonces Me debería mostrar un mensaje que diga "Link has responded with staus 301 and status text Moved Permanently"
+  Escenario: Comprobar los links de el enunciado Following links will send an api call
 
-  Escenario: Comprobar los links de el enunciado "Following links will send an api call"
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link Forbidden
+    Entonces Me deberia mostrar un mensaje que diga Link has responded with staus cuatro cientos tres and status text Forbidden
 
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "Bad Request"
-    Entonces Me debería mostrar un mensaje  que diga "Link has responded with staus 400 and status text Bad Request"
+  Escenario: Comprobar los links de el enunciado Following links will send an api call
 
-  Escenario: Comprobar los links de el enunciado "Following links will send an api call"
-
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "Unauthorized"
-    Entonces Me debería mostrar un mensaje que diga "Link has responded with staus 401 and status text Unauthorized"
-
-  MODULO ELEMENTOS
-  Escenario: Comprobar los links de el enunciado "Following links will send an api call"
-
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "Forbidden"
-    Entonces Me debería mostrar un mensaje que diga "Link has responded with staus 403 and status text Forbidden"
-
-
-  Escenario: Comprobar los links de el enunciado "Following links will send an api call"
-
-    Dado que como usuario me encuentro en la pagina "Links"
-    Cuando selecciono el link "Not Found"
-    Entonces Me debería mostrar un mensaje que diga "Link has responded with staus 404 and status text Not Found"
+    Dado que como usuario me encuentro en la pagina Links
+    Cuando selecciono el link Not Found
+    Entonces Me deberia mostrar un mensaje que diga Link has responded with staus cuatro cientos cuatro and status text Not Found

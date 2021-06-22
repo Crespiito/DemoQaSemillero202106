@@ -13,6 +13,7 @@ public class PracticeFormStepDefinition {
 
     @Cuando("selecciono el boton submit")
     public void seleccionoElBotonSubmit() {
+
         System.out.println("entro al cuando");
     }
 
@@ -24,5 +25,19 @@ public class PracticeFormStepDefinition {
     }
 
 
+    @Cuando("ingreso los datos validos en cada campo")
+    public void ingresoLosDatosValidosEnCadaCampo() {
+
+    }
+
+    @Entonces("confirmo si el registro se realiza con exito")
+    public void confirmoSiElRegistroSeRealizaConExito() {
+
+    }
+
+    @Cuando("ingreso datos invalidos en los campos")
+    public void ingresoDatosInvalidosEnLosCampos() {
+
+    }
 
 }

@@ -36,7 +36,7 @@ public class BrokenLinksStepDefinition {
 
     }
 
-    @Entonces("valido que el navegador sea re dirigido a la pagina principal https:\\/\\/demoqa.com\\/")
+    @Entonces("valido que el navegador sea re dirigido a la pagina principal demoqa")
     public void validoQueElNavegadorSeaReDirigidoALaPaginaPrincipalHttpsDemoqaCom() {
 
     }

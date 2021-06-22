@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/windows/browser_windows.feature",
 glue = "co.com.qvision.certificacion.demoqa.stepdefinitions",
-snippets = CucumberOptions.SnippetType.CAMELCASE)
+snippets = CucumberOptions.SnippetType.CAMELCASE,
+tags = "@test3")
 
 public class BrowserWindowsRunner {
 }

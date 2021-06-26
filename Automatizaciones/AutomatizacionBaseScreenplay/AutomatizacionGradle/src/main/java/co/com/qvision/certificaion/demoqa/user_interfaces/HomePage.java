@@ -13,4 +13,3 @@ public class HomePage {
             .locatedBy("//h5[contains(text(), 'Alerts, Frame & Windows')]");
 
 }
-<h5>Alerts, Frame &amp; Windows</h5>

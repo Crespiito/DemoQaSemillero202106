@@ -2,6 +2,7 @@
 
 Característica: Como usuario deseo verificar del modulo Elements las funcionalidad Text Box
 
+  @te
   Escenario: Validar que en la lista Elements aparezca el item Text Box
     Dado Yo como usuario ingrese al modulo Elements
     Cuando Seleccione Text Box

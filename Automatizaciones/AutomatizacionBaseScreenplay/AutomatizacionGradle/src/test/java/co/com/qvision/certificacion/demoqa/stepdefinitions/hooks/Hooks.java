@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class Hooks {
 
-    @Before(value = "@test")
+    @Before(value = "@te")
     public void abrirNavegador(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");

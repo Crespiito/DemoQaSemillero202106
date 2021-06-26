@@ -1,8 +1,7 @@
 #language: es
-# encoding: iso-8859-1
 
 
-Característica:Se describen los escenarios de prueba enfocados en el sub modulo Upload & Download de la seccion Elements de la pagina https://demoqa.com/
+Característica:Se describen los escenarios de prueba enfocados en el sub modulo Upload & Download de la seccion Elements de la pagina demoqa
 
   Escenario: Yo como usuario deseo descargar un elemento
     Dado que el usuario ingresa al modulo Upload & Download y ubica el boton de Download

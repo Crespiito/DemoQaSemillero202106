@@ -6,10 +6,11 @@ Característica:  Como usuario del sistema ToolsQA deseo verificar el elemento
   Antecedentes:
     Dado que como usuario en el modulo forms y en el item practices form
 
-
-  Escenario:Como usuario del modulo form deseo confirmar el envio del formulario con los campos vacíos
+@Test
+  Escenario:Como usuario del modulo form deseo confirmar el envio del formulario con los campos vacios
     Cuando selecciono el boton submit
     Entonces confirmo si se registra el formulario con campos vacios
+
 
   Escenario:Como usuario del modulo form y el elemento practice form
   deseo confirmar el registro del formulario con todos los campos dilegenciados
@@ -20,5 +21,5 @@ Característica:  Como usuario del sistema ToolsQA deseo verificar el elemento
   Escenario:Como usuario del modulo form y el elemento practice form
   deseo confirmar el registro del formulario con todos los campos dilegenciados erroneamente
 
-    Cuando ingreso datos invalidos en los campos
+    Cuando ingreso datos invalidos en los campos vacios
     Entonces confirmo si el registro se realiza con exito

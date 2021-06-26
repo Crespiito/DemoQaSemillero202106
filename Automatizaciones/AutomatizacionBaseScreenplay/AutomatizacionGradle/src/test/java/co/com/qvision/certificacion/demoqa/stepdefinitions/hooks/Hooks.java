@@ -8,13 +8,13 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class Hooks {
 
-    @Before(value = "@test", order = 2)
+    @Before(value = "@test")
     public void abrirNavegador(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
-
+/*
     @Before(value = "@test2", order = 3)
     public void abrirNavegador2(){
         OnStage.setTheStage(new OnlineCast());
@@ -28,7 +28,7 @@ public class Hooks {
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
-
+*/
     //@After
 
 

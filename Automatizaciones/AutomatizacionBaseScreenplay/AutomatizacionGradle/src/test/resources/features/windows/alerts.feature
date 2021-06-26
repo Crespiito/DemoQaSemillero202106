@@ -1,11 +1,12 @@
 #language: es
 
 Característica: Como usuario deseo verificar la funcionalidad de los botones Haz clic en mi de acuerdo a su referencia
+  @test
   Escenario: Visualizacion de alerta
     Dado que el usuario quiera ver la alerta
     Cuando seleccione el boton Haz click en mi que corresponde a la alerta deseada
     Entonces se mostrara una ventana con un mensaje de la accion ejecutada y para continuar debera dar click en el boton aceptar
-  @test
+
   Escenario: Visualizacion de alerta despues de cinco segundos
     Dado que el usuario quiera ver la alerta despues de cinco segundos
     Cuando seleccione el boton Haz click en mi que corresponde a la alerta despues de cinco segundos

@@ -3,6 +3,7 @@ package co.com.qvision.certificacion.demoqa.stepdefinitions.hooks;
 import co.com.qvision.certificaion.demoqa.models.OpcionesMenuModel;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
+import lombok.Value;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -11,13 +12,13 @@ import java.util.Map;
 
 public class Hooks {
 
-    @Before()
+    @Before(value= "@test11")
     public void abrirNavegador(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
-
+/*
     @DataTableType
     public OpcionesMenuModel opcionesMenu(Map<String,String> dato) {
         return new OpcionesMenuModel(dato.get("Tarjeta"),dato.get("Seleccionado"));

@@ -6,9 +6,9 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actors.OnStage;
 
-import static co.com.qvision.certificaion.demoqa.tasks.IngresarAModuloYSubmenu.seleccionarMenu;
+import static co.com.qvision.certificaion.demoqa.tasks.IngresarAModuloYSubmenuTask.seleccionarMenu;
 
-public class AccederModuloElements {
+public class AccederAModulo {
     @Dado("Yo como usuario ingrese a la Tarjeta y el submenu Seleccionado")
     public void yoComoUsuarioIngreseALaTarjetaYElSubmenuSeleccionado(OpcionesMenuModel opciones) {
         OnStage.theActorInTheSpotlight().attemptsTo(

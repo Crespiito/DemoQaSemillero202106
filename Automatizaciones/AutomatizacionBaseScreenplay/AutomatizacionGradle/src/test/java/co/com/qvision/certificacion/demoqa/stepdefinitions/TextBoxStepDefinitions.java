@@ -1,10 +1,12 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions;
 
-import co.com.qvision.certificaion.demoqa.interactions.TarjetaPrincipalElementsInteractions;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actors.OnStage;
+
+import static co.com.qvision.certificaion.demoqa.tasks.DiligenciarFormularioTextBoxTask.llenarFormularioTxtBox;
 
 public class TextBoxStepDefinitions {
 
@@ -23,9 +25,11 @@ public class TextBoxStepDefinitions {
 
     }
 
-    @Cuando("Diligencio cada uno de los campos")
-    public void diligencioCadaUnoDeLosCampos() {
-
+    @Cuando("Diligencio el campo Full Name y Email y CurrentAddress y PermanentAddress")
+    public void DiligencioCadaUnoDeLosCampos() {
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                llenarFormularioTxtBox()
+        );
     }
 
     @Entonces("Se visualizara el resumen de la informacion diligenciada")

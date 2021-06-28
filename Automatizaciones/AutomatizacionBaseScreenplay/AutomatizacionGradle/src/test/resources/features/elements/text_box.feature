@@ -2,16 +2,18 @@
 
 Característica: Como usuario deseo verificar del modulo Elements las funcionalidad Text Box
 
-  @te
+
   Escenario: Validar que en la lista Elements aparezca el item Text Box
     Dado Yo como usuario ingrese al modulo Elements
     Cuando Seleccione Text Box
     Entonces Despliegue el formulario
 
+  @tet2
   Escenario: Diligenciar todos los campos del formulario Text Box
     Dado Yo como usuario este en el formulario desplegado de Text Box
-    Cuando Diligencio cada uno de los campos
+    Cuando Diligencio el campo Full Name y Email y CurrentAddress y PermanentAddress
     Entonces Se visualizara el resumen de la informacion diligenciada
+
 
   Escenario: Diligenciar solo el campo Full Name del formulario
     Dado Yo como usuario este en el formulario desplegado de Text Box

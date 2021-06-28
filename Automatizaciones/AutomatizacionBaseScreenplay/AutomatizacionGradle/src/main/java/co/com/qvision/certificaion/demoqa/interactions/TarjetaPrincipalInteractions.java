@@ -8,11 +8,11 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import static co.com.qvision.certificaion.demoqa.user_interfaces.HomePage.BTN_TARJETA;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class TarjetaPrincipalElementsInteractions implements Interaction {
+public class TarjetaPrincipalInteractions implements Interaction {
 
     String opcion;
 
-    public TarjetaPrincipalElementsInteractions(String opcion) {
+    public TarjetaPrincipalInteractions(String opcion) {
         this.opcion = opcion;
     }
 
@@ -24,8 +24,8 @@ public class TarjetaPrincipalElementsInteractions implements Interaction {
         );
     }
 
-    public static TarjetaPrincipalElementsInteractions tarjetaMenuPrincipalElements(String opcion){
-        return instrumented(TarjetaPrincipalElementsInteractions.class,opcion);
+    public static TarjetaPrincipalInteractions tarjetaMenuPrincipal(String opcion){
+        return instrumented(TarjetaPrincipalInteractions.class,opcion);
     }
 
 

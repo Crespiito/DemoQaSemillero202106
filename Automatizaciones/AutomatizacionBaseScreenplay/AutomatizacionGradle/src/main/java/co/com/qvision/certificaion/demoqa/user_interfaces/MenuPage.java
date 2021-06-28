@@ -55,6 +55,24 @@ public class MenuPage {
     public static final Target EMAIL = Target.the("Campo email").
             locatedBy("//*[@id='userEmail']");
 
+    public static final Target MOBILE = Target.the("User Number").
+            locatedBy("//*[@id='userNumber']");
+
+    public static final Target SUBJECTS = Target.the("Subjects").
+            locatedBy("//*[@id='subjectsInput']");
+
+    public static final Target CURRENT_ADDRESS = Target.the("Current Address").
+            locatedBy("//*[@id='currentAddress']");
+
+    public static final Target GENDER = Target.the("Gender").
+            locatedBy("//*[contains(@class,'custom-control-input') and @value='Male']");
+
+    public static final Target HOBBIES = Target.the("Hobbies").
+            locatedBy("//input[@id='hobbies-checkbox-2']/[position()=1]");
+
+
+
+
 
     //MODULO ALERTS
 }

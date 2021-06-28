@@ -13,5 +13,5 @@ Característica: Como usuario del sistema ToolsQa deseo verificar el elemento
     Ejemplos:
       | La Tarjeta | Seleccionado  |
       | Forms      | Practice Form |
-      | Elements   | Text Box      |
-      | Elements   | Check Box     |
+     # | Elements   | Text Box      |
+     # | Elements   | Check Box     |

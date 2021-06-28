@@ -65,7 +65,7 @@ public class MenuPage {
             locatedBy("//*[@id='currentAddress']");
 
     public static final Target GENDER = Target.the("Gender").
-            locatedBy("//label[@class='custom-control-label']");
+            locatedBy("//label[contains(@for, 'gender-radio-1') and @class='custom-control-label']");
 
     public static final Target HOBBIES = Target.the("Hobbies").
             locatedBy("//input[@id='hobbies-checkbox-2']/[position()=1]");

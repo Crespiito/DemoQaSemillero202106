@@ -5,11 +5,9 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class HomePage {
 
-    public static final Target BTN_TARJETA_ELEMENTS = Target.the("Tarjeta Elements")
-            .locatedBy("//h5[contains(text(), 'Elements')]");
-    public static final Target BTN_TARJETA_FORMS = Target.the("Tarjeta Elements")
-            .locatedBy("//h5[contains(text(), 'Forms')]");
-    public static final Target BTN_TARJETA_ALERTS = Target.the("Tarjeta Elements")
-            .locatedBy("//h5[contains(text(), 'Alerts, Frame & Windows')]");
+    public static final Target BTN_TARJETA = Target.the("Tarjeta Elements")
+            .locatedBy("//h5[contains(text(), '{0}')]");
+
 
 }
+

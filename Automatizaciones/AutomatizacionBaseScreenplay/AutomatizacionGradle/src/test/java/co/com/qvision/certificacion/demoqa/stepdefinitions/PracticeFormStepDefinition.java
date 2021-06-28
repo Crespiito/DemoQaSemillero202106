@@ -3,12 +3,17 @@ package co.com.qvision.certificacion.demoqa.stepdefinitions;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.actors.OnStage;
+
+
 
 public class PracticeFormStepDefinition {
 
     @Dado("que como usuario en el modulo forms y en el item practices form")
     public void queComoUsuarioEnElModuloFormsYEnElItemPracticesForm() {
-        System.out.println("entro al dado ");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+
+        );
     }
 
     @Cuando("selecciono el boton submit")

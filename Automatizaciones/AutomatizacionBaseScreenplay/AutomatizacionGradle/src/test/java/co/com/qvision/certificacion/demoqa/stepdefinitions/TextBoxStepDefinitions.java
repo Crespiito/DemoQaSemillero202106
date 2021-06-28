@@ -1,7 +1,6 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions;
 
 import co.com.qvision.certificaion.demoqa.interactions.TarjetaPrincipalElementsInteractions;
-import co.com.qvision.certificaion.demoqa.tasks.IngresarAElementsTextBoxTask;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -11,9 +10,7 @@ public class TextBoxStepDefinitions {
 
     @Cuando("Seleccione Text Box")
     public void seleccioneTextBox() {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                TarjetaPrincipalElementsInteractions.tarjetaMenuPrincipalElements()
-        );
+
     }
 
     @Entonces("Despliegue el formulario")

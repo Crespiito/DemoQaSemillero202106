@@ -1,5 +1,5 @@
 #language: es
-#enconding: iso-8859-1
+
 Característica:  Como usuario del sistema ToolsQA deseo verificar el elemento
   practice form del modulo Forms para confirmar su correco funcionamiento
 

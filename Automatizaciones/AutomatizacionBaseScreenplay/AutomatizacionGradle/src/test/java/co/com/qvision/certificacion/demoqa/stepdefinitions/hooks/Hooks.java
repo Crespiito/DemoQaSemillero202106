@@ -24,7 +24,7 @@ public class Hooks {
     public void abrirNavegadorforms(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("Mateo");
-        theActorInTheSpotlight().attemptsTo(Open.url("https://demoqa.com/buttons"));
+        theActorInTheSpotlight().attemptsTo(Open.url("https://demoqa.com/automation-practice-form"));
 
     }
 

@@ -18,6 +18,7 @@ public class TarjetaPrincipalInteraction implements Interaction {
             Scroll.to(TARJETA_FORM),
             Click.on(TARJETA_FORM),
             Click.on(LBL_LATERAL)
+
     );
     }
 

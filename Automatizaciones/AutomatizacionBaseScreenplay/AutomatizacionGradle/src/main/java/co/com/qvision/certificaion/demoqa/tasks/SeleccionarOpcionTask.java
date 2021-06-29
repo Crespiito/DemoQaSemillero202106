@@ -11,16 +11,24 @@ public class SeleccionarOpcionTask implements Task {
 
     private static SeleccionarOpcionTask instrumented;
 
-    public SeleccionarOpcionTask(){
+    String opcion;
+
+    public SeleccionarOpcionTask(String opcion){
+
+        this.opcion = opcion;
 
     }
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo((TarjetaPrincipalInteraction.seleccion()));
+        actor.attemptsTo((TarjetaPrincipalInteraction.seleccion(opcion)));
+
+
     }
 
-    public static SeleccionarOpcionTask menu(){
-        return instrumented(SeleccionarOpcionTask.class);
+
+    public static SeleccionarOpcionTask menu(String opcion){
+
+        return instrumented(SeleccionarOpcionTask.class,opcion);
     }
 
 }

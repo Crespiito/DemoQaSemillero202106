@@ -7,8 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features/forms/practice_form.feature",
         glue = "co.com.qvision.certificacion.demoqa.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@Test"
-
+        tags = "@Test1"
 
 )
 

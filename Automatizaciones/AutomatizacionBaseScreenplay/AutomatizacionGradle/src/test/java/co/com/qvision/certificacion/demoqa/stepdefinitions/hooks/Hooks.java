@@ -10,7 +10,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class Hooks {
 
-    @Before("@Test")
+    @Before("@Test1")
 
     public void abrirNavegador(){
         OnStage.setTheStage(new OnlineCast());

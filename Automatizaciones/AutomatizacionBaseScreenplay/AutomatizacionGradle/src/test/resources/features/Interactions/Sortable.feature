@@ -1,6 +1,7 @@
 #language: es
 
 Característica:Como usuario deseo verificar la funcionalidad "Sortable" del modulo "Interactions"
+  @TestInteraction
 
   Escenario: Validar que en la lista Interactions aparezca el item Selectable
     Dado Yo como usuario ingrese al modulo "Interactions"

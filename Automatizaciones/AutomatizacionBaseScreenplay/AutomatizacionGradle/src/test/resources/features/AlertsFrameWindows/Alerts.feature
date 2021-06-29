@@ -2,7 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad de los botones "Haz clic en mi" de acuerdo a su referencia
- @Test1
+ @TestAlerts
   Escenario: Visualizacion de alerta
     Dado que el usuario quiera ver la alerta
     Cuando seleccione el boton "Haz click en mi" que corresponde a la alerta deseada

@@ -2,6 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "ToolTips" del modulo "Widgets"
+  @TestWidgets
 
   Escenario: Validar que funcione el evento "Hover me to see" en un boyon
     Dado Yo como usuario ingrese a la pestana "ToolTips"

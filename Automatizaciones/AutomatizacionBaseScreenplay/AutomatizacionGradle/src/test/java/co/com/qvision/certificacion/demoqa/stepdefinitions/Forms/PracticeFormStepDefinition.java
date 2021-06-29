@@ -1,14 +1,20 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.Forms;
 
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+
+import co.com.qvision.certificaion.demoqa.tasks.LlenarFormulario;
+import co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionTask;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.actors.OnStage;
 
 public class PracticeFormStepDefinition {
 
-    @Dado("que como usuario en el modulo forms y en el item practices form")
-    public void queComoUsuarioEnElModuloFormsYEnElItemPracticesForm() {
-        System.out.println("entro al dado ");
+    @Dado("que como usuario ingreso en el modulo forms y en el item practices form")
+    public void queComoUsuarioIngresoEnElModuloFormsYEnElItemPracticesForm() {
+        OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionTask.seleccionarOpcion());
+        //System.out.println("entro al dado ");
     }
 
     @Cuando("selecciono el boton submit")
@@ -37,5 +43,14 @@ public class PracticeFormStepDefinition {
     }
 
 
+    @Dado("que el usuario ingresa a la opcion de La Tarjeta y el submenu Seleccionado")
+    public void queElUsuarioIngresaALaOpcionDeLaTarjetaYElSubmenuSeleccionado() {
+        OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionTask.seleccionarOpcion());
+    }
 
+    @Cuando("lleno el formulario")
+    public void llenoElFormulario() {
+        OnStage.theActorInTheSpotlight().attemptsTo(LlenarFormulario.llenarFormulario());
+
+    }
 }

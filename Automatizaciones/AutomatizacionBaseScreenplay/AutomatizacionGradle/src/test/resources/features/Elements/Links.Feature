@@ -1,6 +1,7 @@
 #language: es
 
 Característica: Como usuario deseo probar los links de el elemento "Links"
+  @TestElements
 
   Escenario: Comprobar los links de el enunciado "Following links will open new tab"
 

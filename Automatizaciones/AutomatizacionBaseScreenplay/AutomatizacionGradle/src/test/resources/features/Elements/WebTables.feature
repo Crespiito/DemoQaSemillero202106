@@ -3,6 +3,8 @@
 
 Característica: Como usuario deseo verificar la funcionalidad de los botones de acción en la tabla contenida en
   Web Tables del módulo Elements
+  @TestElements
+
   Escenario: Verificación del boton de acción editar
     Dado que el usuario desee editar un registro de la tabla
     Cuando seleccione el boton de editar de determinado registro

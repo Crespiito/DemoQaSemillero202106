@@ -2,6 +2,8 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "Menu" del modulo "Widgets"
+  @TestWidgets
+
   Escenario: Validar que funcione el evento "Menu"
     Dado Yo como usuario ubico la opcion "Main Item 1"
     Cuando Seleccione el item "Main Item 1"

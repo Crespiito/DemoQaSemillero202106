@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features/AlertsFrameWindows/BrowserWindows.feature",
         glue = "co.com.qvision.certificacion.demoqa.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@Test1"
+        tags = " @TestAlerts"
 )
 
 public class BrowserWindowsRunner {

@@ -2,6 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "Slider" del modulo "Widgets"
+  @TestWidgets
 
   Escenario: Validar que funcione el evento "Slider"
     Dado Yo como usuario ingrese a la pestana "Slider"

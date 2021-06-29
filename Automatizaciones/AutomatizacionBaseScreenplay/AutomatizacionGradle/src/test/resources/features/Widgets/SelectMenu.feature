@@ -2,6 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "SelectMenu" del modulo "Widgets"
+  @TestWidgets
 
   Escenario: Validar que funcione el evento "Select Value"
     Dado Yo como usuario ubico la opcion "Select Value" y el recuadro "Select Option"

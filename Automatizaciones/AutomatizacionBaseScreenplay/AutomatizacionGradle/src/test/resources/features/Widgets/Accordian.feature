@@ -2,6 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "Accordian" del modulo "Widgets"
+  @TestWidgets
 
   Escenario: Validar que funcione el evento "Accordian"
     Dado Yo como usuario ingreso a la pestana "Accordian"

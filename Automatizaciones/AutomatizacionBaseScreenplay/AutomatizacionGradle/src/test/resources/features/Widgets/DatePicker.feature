@@ -2,6 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "Date Picker" del modulo "Widgets"
+  @TestWidgets
 
   Escenario: Validar que funcione el evento "Date Picker"
     Dado Yo como usuario ubico la opcion "Select Date" y el recuadro "Select Date"

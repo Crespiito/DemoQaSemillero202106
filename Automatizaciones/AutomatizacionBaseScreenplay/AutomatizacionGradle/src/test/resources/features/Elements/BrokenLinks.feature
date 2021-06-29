@@ -2,6 +2,7 @@
 
 Característica: Se describen los escenarios de prueba enfocados en el sub modulo Broken Links Image
                 de la seccion Elements de la pagina
+  @TestElements
 
   Escenario: Yo como usuario deseo validar que aparezca una imagen valida
     Dado que el usuario ingresa al modulo Broken Links -Image

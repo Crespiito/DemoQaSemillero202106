@@ -1,6 +1,8 @@
 #language: es
 
 Característica: Como usuario deseo verificar la funcionalidad del item Radio Button del modulo Elements
+  @TestElements
+
   Escenario: Validar que en la lista de Elements aparezca  el item Radio Button
     Dado que el usuario acceda al modulo Elements
     Cuando despliegue la lista de Elements

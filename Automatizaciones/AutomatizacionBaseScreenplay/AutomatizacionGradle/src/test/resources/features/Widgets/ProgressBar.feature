@@ -2,6 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "ProgressBar" del modulo "Widgets"
+  @TestWidgets
 
   Escenario: Validar que funcione el evento "ProgressBar"
     Dado Yo como usuario ingrese a la pestana "ProgressBar"

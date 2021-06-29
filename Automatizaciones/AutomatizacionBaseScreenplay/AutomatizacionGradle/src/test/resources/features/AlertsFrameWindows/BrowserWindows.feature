@@ -3,7 +3,7 @@
 
 Característica: Como usuario deseo verificar del modulo "Alerts, Frame & Windows" la
   funcionalidad "Browser Windows"
-
+  @TestAlerts
   Escenario: Validar que en la lista Alerts, Frame & Windows aparezca el item Browser Windows
     Dado Yo como usuario ingrese al modulo "Alerts, Frame & Windows"
     Cuando Seleccione "Browser Windows"

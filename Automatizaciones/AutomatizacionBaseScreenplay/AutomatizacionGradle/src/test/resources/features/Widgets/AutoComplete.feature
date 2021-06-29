@@ -2,6 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "AutoComplete" del modulo "Widgets"
+  @TestWidgets
 
   Escenario: Validar que funcione el evento "AutoComplete"
     Dado Yo como usuario ubico la opcion "Type multiple color names" y un recuadro bajo el

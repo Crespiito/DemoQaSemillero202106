@@ -2,7 +2,7 @@
 
   #Item Frames Scroll
 Característica: Como usuario deseo observar y verificar el item "Frames" del elemento Alerts, Frames & Windows
-
+  @TestAlerts
   Escenario: Verificar item Frames
 
     Dado que estoy en el modulo alerts verifico el item Frames

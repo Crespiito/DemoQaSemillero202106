@@ -3,7 +3,7 @@
 
 
 Característica: Se describen los escenarios de prueba enfocados en el sub modulo Nested Frames de la seccion Alerts de la pagina https://demoqa.com/
-
+  @TestAlerts
 
   Escenario: Yo como usuario deseo validar la existencia y apariencia de un marcos anidados
     Dado que el usuario ingresa al modulo Nested Frames y ubica un marco dentro de otro marco, delimitados.

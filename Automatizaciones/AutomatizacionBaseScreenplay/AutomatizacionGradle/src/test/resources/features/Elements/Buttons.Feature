@@ -1,6 +1,7 @@
 #language: es
 
 Característica: Como usuario deseo verificar los botones del elemento buttons
+  @TestElements
 
   Escenario: Verificar funcion de boton "click me"
 

@@ -1,6 +1,7 @@
 #language: es
 
 Característica:Como usuario deseo verificar la funcionalidad "Resizable" del modulo "Interactions"
+  @TestInteraction
 
   Escenario: Validar que en la lista Interactions aparezca el item Resizable
     Dado Yo como usuario ingrese al modulo "Interactions"

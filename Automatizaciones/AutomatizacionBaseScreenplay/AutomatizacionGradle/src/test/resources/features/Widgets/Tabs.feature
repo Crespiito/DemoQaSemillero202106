@@ -2,6 +2,7 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad "Tabs" del modulo "Widgets"
+  @TestWidgets
 
   Escenario: Validar que en la lista "Widgets" aparezca el item "Tabs"
     Dado Yo como usuario ingreso al modulo "Widgets"

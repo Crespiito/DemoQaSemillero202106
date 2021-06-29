@@ -2,6 +2,7 @@
 
 
 Característica:Como usuario deseo verificar la funcionalidad "Droppable" del modulo "Interactions"
+  @TestInteraction
 
   Escenario: Validar que en la lista Interactions aparezca el item Droppable
     Dado Yo como usuario ingrese al modulo "Interactions"

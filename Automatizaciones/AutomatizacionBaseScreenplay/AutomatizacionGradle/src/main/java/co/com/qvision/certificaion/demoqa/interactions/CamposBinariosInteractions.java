@@ -13,9 +13,9 @@ public class CamposBinariosInteractions implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Scroll.to(GENDER),
-                Click.on(GENDER)
-               // Scroll.to(HOBBIES),
-               // Click.on(HOBBIES)
+                Click.on(GENDER),
+                Scroll.to(HOBBIES),
+                Click.on(HOBBIES)
         );
     }
 

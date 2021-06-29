@@ -22,7 +22,6 @@ public class IngresarAModuloYSubmenuTask implements Task {
         actor.attemptsTo(
                 tarjetaMenuPrincipal(opcion),
                 seleccionarSubMenu(submenu)
-
         );
     }
 

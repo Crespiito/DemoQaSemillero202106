@@ -7,7 +7,7 @@ import static co.com.qvision.certificaion.demoqa.interactions.SeleccionarOpcione
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 
-public class SeleccionarOpcionTask implements Task{
+public class SeleccionarOpcionTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -15,7 +15,8 @@ public class SeleccionarOpcionTask implements Task{
         );
     }
 
-    public static SeleccionarOpcionTask seleccionarOpcion(){
-        return instrumented(SeleccionarOpcionTask.class);
+    public static SeleccionarOpcionTask seleccionarOpcion() {
+        return instrumented(SeleccionarOpcionTask.class
+        );
     }
 }

@@ -16,12 +16,16 @@ public class MenuPage {
     // ELementos Text Box
     public static final Target TXT_FULL_NAME = Target.the("User name").
             locatedBy("//*[@id=\"userName\"]");
-    public static final Target TXT_EMAIL = Target.the("User name").
+    public static final Target TXT_EMAIL = Target.the("Email").
             locatedBy("//*[@id=\"userEmail\"]");
-    public static final Target TXT_CURRENT_ADDRESS = Target.the("User name").
+    public static final Target TXT_CURRENT_ADDRESS = Target.the("Current Address").
             locatedBy("//*[@id=\"currentAddress\"]");
-    public static final Target TXT_PERMANENT_ADDRESS = Target.the("User name").
+    public static final Target TXT_PERMANENT_ADDRESS = Target.the("Permanent Addres").
             locatedBy("//*[@id=\"permanentAddress\"]");
+    public static final Target BTN_SUBMIT_ELEMENTS =Target.the("Botón submit en Text Box").
+            locatedBy("//*[@id=\"submit\"]");
+
+
 
 
     // Elementos Check Box
@@ -68,9 +72,30 @@ public class MenuPage {
             locatedBy("//label[contains(@for, 'gender-radio-1') and @class='custom-control-label']");
 
     public static final Target HOBBIES = Target.the("Hobbies").
-            locatedBy("//input[@id='hobbies-checkbox-2']/[position()=1]");
+            locatedBy("//label[contains(@for, 'hobbies-checkbox-1') and @class='custom-control-label']");
 
+    public static final Target DEPARTAMENTOS = Target.the("Departamento").
+            locatedBy("//div[text() = 'Select State']");
 
+    public static final Target SELECCIONAR_DEPARTAMENTOS = Target.the("Departamento").
+            locatedBy("//*[@id='react-select-3-option-2']");
+
+    //*[text() = 'NCR']
+    //div[text() = 'Select State']
+    //*[@id="state"]
+    //*[@id="react-select-9-input"]
+
+    public static final Target CITY = Target.the("City").
+            locatedBy("//div[text() = 'Select City']");
+
+    public static final Target SELECCIONAR_CITY = Target.the("Ciudad").
+            locatedBy("//*[@id='react-select-4-option-1']");
+
+    public static final Target BTN_SUBMIT_FORM = Target.the("Submit form").
+            locatedBy(" //*[@id='submit']");
+
+    public static final Target FECHA = Target.the("Fecha").
+            locatedBy("//*[@id='dateOfBirthInput']");
 
 
 

@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 
+import static co.com.qvision.certificaion.demoqa.interactions.ClickEnBotonesInteractions.clickEnBotonesInteractions;
 import static co.com.qvision.certificaion.demoqa.interactions.LlenarTextBoxInteractions.llenarTextBox;
 import static co.com.qvision.certificaion.demoqa.interactions.SubMenuInteractions.seleccionarSubMenu;
 import static co.com.qvision.certificaion.demoqa.interactions.TarjetaPrincipalInteractions.tarjetaMenuPrincipal;
@@ -24,13 +25,10 @@ public class DiligenciarFormularioTextBoxTask implements Task {
                 Click.on(BTN_TARJETA_ELEMENTS),
                 Scroll.to(LBL_LEFT_SUB_MENU_TEXT_BOX),
                 Click.on(LBL_LEFT_SUB_MENU_TEXT_BOX),
-                llenarTextBox()
-
+                llenarTextBox(),
+                clickEnBotonesInteractions()
         );
 
-        //tarjetaMenuPrincipal("Elements");
-        //seleccionarSubMenu("Text Box");
-        //seleccionarMenu("Elements","Text Box"),
     }
 
     public static DiligenciarFormularioTextBoxTask llenarFormularioTxtBox() {

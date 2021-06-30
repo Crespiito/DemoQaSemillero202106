@@ -1,6 +1,5 @@
 package co.com.qvision.certificaion.demoqa.interactions;
 
-import io.cucumber.java.bs.A;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
@@ -14,7 +13,8 @@ public class CamposTextoInteraction implements Interaction {
         actor.attemptsTo(Enter.theValue("juan").into(NOMBRE),
                 Enter.theValue("bautista").into(APELLIDO),
                 Enter.theValue("hola@cooreo.hola").into(CORREO),
-                Click.on(GENERO)
+                Click.on(GENERO),
+                Enter.theValue("3333333351").into(NUMERO)
                 );
     }
 

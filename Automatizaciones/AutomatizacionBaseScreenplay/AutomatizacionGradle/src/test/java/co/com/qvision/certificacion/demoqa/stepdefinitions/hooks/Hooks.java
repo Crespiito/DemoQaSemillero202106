@@ -13,7 +13,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class Hooks {
 
-    @Before("@test1")
+    @Before()
     public void abrirNavegador(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");

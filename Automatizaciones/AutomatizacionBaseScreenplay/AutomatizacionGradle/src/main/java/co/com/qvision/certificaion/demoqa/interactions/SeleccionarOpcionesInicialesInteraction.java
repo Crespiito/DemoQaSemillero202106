@@ -3,12 +3,9 @@ package co.com.qvision.certificaion.demoqa.interactions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.Clear;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.actions.SendKeys;
 
-import static co.com.qvision.certificaion.demoqa.user_interfaces.FormPage.FECHA;
 import static co.com.qvision.certificaion.demoqa.user_interfaces.HomePage.BTN_TARJETA;
 import static co.com.qvision.certificaion.demoqa.user_interfaces.MenuPage.BTN_LATERAL;
 

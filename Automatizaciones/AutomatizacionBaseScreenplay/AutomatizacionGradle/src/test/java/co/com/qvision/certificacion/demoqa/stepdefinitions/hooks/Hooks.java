@@ -19,7 +19,7 @@ public class Hooks {
 
     }
 
-    @Before("@Test2")
+    /*@Before
 
     public void abrirNavegadorforms(){
         OnStage.setTheStage(new OnlineCast());
@@ -27,5 +27,6 @@ public class Hooks {
         theActorInTheSpotlight().attemptsTo(Open.url("https://demoqa.com/automation-practice-form"));
 
     }
+    */
 
 }

@@ -1,4 +1,4 @@
-package co.com.qvision.certificacion.demoqa.stepdefinitions;
+package co.com.qvision.certificacion.demoqa.stepdefinitions.windows;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;

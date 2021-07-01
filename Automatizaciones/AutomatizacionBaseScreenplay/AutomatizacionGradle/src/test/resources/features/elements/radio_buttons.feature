@@ -5,8 +5,12 @@ Característica: Como usuario deseo verificar la funcionalidad del item Radio Bu
 
   @test12
   Esquema del escenario: Validar que en la lista de Elements aparezca el item Radio Button
-    Dado que el usuario ingresa a la opcion de <La Tarjeta> y el submenu <Seleccionado>
-    Cuando despliegue la lista de Elements <Boton>
+    Dado que el usuario ingresa a la opcion de La Tarjeta y el submenu Seleccionado
+      | La Tarjeta   | Seleccionado   |
+      | <La Tarjeta> | <Seleccionado> |
+    Cuando despliegue la lista de Elements Boton
+      | Boton   |
+      | <Boton> |
     Entonces valido que este presente el item Radio Button
     Ejemplos:
       | La Tarjeta | Seleccionado | Boton           |

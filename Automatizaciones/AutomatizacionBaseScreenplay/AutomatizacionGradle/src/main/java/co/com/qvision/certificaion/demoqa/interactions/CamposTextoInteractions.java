@@ -16,7 +16,7 @@ public class CamposTextoInteractions implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Enter.keyValues("Juan").into(NOMBRE),
-                Enter.keyValues("Hernández").into(APELLIDO),
+                Enter.keyValues("Hernandez").into(APELLIDO),
                 Enter.keyValues("juan@mail.com").into(EMAIL),
                 Scroll.to(MOBILE),
                 Enter.keyValues("9876541238").into(MOBILE),

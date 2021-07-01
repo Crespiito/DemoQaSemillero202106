@@ -1,5 +1,6 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.hooks;
 
+import co.com.qvision.certificaion.demoqa.models.OpcionRadioButtonModel;
 import co.com.qvision.certificaion.demoqa.models.OpcionesMenuModel;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
@@ -18,12 +19,17 @@ public class Hooks {
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
-/*
+
     @DataTableType
     public OpcionesMenuModel opcionesMenu(Map<String,String> dato) {
-        return new OpcionesMenuModel(dato.get("Tarjeta"),dato.get("Seleccionado"));
+        return new OpcionesMenuModel(dato.get("La Tarjeta"),dato.get("Seleccionado"));
     }
 
+    @DataTableType
+    public OpcionRadioButtonModel opcionRadioButton(Map<String,String> dato) {
+        return new OpcionRadioButtonModel(dato.get("Boton"));
+    }
+/*
     @Before(value = "@test2", order = 3)
     public void abrirNavegador2(){
         OnStage.setTheStage(new OnlineCast());

@@ -1,5 +1,6 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions;
 
+import co.com.qvision.certificaion.demoqa.models.OpcionRadioButtonModel;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -11,10 +12,10 @@ import static co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionTask.sel
 public class RadioButtonsStepDefinitions {
 
 
-    @Cuando("despliegue la lista de Elements {}")
-    public void despliegueLaListaDeElements(String boton) {
+    @Cuando("despliegue la lista de Elements Boton")
+    public void despliegueLaListaDeElements(OpcionRadioButtonModel opcion) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                hacerClickTask(boton)
+                hacerClickTask(opcion.getBoton())
         );
 
     }
@@ -65,9 +66,9 @@ public class RadioButtonsStepDefinitions {
     }
 
     @Cuando("se ubique en la opcion No")
-    public void seUbiqueEnLaOpcionNo(String boton) {
+    public void seUbiqueEnLaOpcionNo(OpcionRadioButtonModel opcion) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                hacerClickTask(boton)
+                hacerClickTask(opcion.getBoton())
         );
 
     }

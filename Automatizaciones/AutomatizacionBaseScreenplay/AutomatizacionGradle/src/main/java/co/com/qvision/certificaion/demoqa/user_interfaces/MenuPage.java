@@ -39,7 +39,7 @@ public class MenuPage {
     public static final Target BTN_RADIO_BUTTON =Target.the("Botón Radio Button").
             locatedBy("//label[contains(@for, '{0}')]");
 
-    //label[contains(@for, 'impressiveRadio')]
+
     // Elementos Web Tables
 //label[contains(@for, 'yesRadio ')]
     // Elementos Buttons
@@ -88,6 +88,8 @@ public class MenuPage {
     public static final Target SELECCIONAR_DEPARTAMENTOS = Target.the("Departamento").
             locatedBy("//*[@id='react-select-3-option-2']");
 
+    //*[@id="email"]
+
     //*[text() = 'NCR']
     //div[text() = 'Select State']
     //*[@id="state"]
@@ -105,7 +107,14 @@ public class MenuPage {
     public static final Target FECHA = Target.the("Fecha").
             locatedBy("//*[@id='dateOfBirthInput']");
 
+    public static final Target VALIDACION_NAME = Target.the("Validacion name").
+            locatedBy("//*[@id='example-modal-sizes-title-lg']");
 
+    public static final Target CAMPO_POR_ID = Target.the("campo {0}").
+            locatedBy("//*[@id='{0}']");
+
+    public static final Target POSITION_TABLE = Target.the("campo tabla en posiciones {0} {1}").
+            locatedBy(" //table/tbody/tr[{0}]/td[{1}]");
 
     //MODULO ALERTS
 }

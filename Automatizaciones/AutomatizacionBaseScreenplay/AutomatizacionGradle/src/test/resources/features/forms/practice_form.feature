@@ -9,10 +9,16 @@ Característica:  Como usuario del sistema ToolsQA deseo verificar el elemento
     |La Tarjeta|Seleccionado|
     |<La Tarjeta>| <Seleccionado>|
     Cuando lleno el formulario
+    |nombre|apellido|correo|telefono|genero|
+    |<nombre>|<apellido>|<correo>|<telefono>|<genero>|
     Entonces confirmo si se registra el formulario
     Ejemplos:
-      |La Tarjeta|Seleccionado|
-      |Forms     |Practice Form|
+      |La Tarjeta|Seleccionado|nombre|apellido|correo|telefono|genero|
+      |Forms     |Practice Form|juan|bautista|correo@correo.es|1234567891|Male|
+      |Forms     |Practice Form|juan|bautista2|correo@gmail.es|1234567891|Female|
+      |Forms     |Practice Form|juan|bautista3|correo@hotmial.es|1234567892|Male|
+      |Forms     |Practice Form|juan|bautista4|correo@randomnose.es|1234567840|mariano|
+      |Forms     |Practice Form|juan|bautista5|correo@yahoo.es|1234567890|Male|
 
 
 

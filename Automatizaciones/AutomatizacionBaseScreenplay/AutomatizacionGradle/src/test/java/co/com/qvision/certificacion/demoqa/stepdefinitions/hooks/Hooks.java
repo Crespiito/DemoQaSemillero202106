@@ -1,5 +1,6 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.hooks;
 
+import co.com.qvision.certificaion.demoqa.models.FormData;
 import co.com.qvision.certificaion.demoqa.models.OpcionesMenuModel;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
@@ -25,6 +26,18 @@ public class Hooks {
         return new OpcionesMenuModel(datos.get("La Tarjeta"),datos.get("Seleccionado"));
     }
 
+
+    @DataTableType
+    public FormData datosFormulario(Map<String,String> datos){
+        return new FormData(
+                    datos.get("nombre"),
+                    datos.get("apellido"),
+                    datos.get("genero"),
+                    datos.get("correo"),
+                    datos.get("telefono")
+
+            );
+    }
 
 
 

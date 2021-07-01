@@ -7,16 +7,25 @@ import static co.com.qvision.certificaion.demoqa.interactions.SeleccionarOpcione
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 
+
 public class SeleccionarOpcionTask implements Task {
+
+    String tarjeta;
+    String subMenu;
+
+    public SeleccionarOpcionTask(String tarjeta, String subMenu) {
+        this.tarjeta = tarjeta;
+        this.subMenu = subMenu;
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                seleccionarOpcionesInicialesInteraction()
+                seleccionarOpcionesInicialesInteraction(tarjeta,subMenu)
         );
     }
 
-    public static SeleccionarOpcionTask seleccionarOpcion() {
-        return instrumented(SeleccionarOpcionTask.class
-        );
+    public static SeleccionarOpcionTask seleccionarOpcion(String tarjeta, String subMenu) {
+        return instrumented(SeleccionarOpcionTask.class,tarjeta,subMenu);
     }
 }

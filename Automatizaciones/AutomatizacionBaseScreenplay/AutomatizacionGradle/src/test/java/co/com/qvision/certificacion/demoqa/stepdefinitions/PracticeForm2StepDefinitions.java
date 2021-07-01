@@ -9,10 +9,10 @@ import static co.com.qvision.certificaion.demoqa.tasks.DiligenciarCamposTask.dil
 import static co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionTask.seleccionarOpcion;
 
 public class PracticeForm2StepDefinitions {
-    @Dado("que el usuario ingresa a la opcion de La Tarjeta y el submenu Seleccionado")
-    public void queElUsuarioIngresaALaOpcionDeLaTarjetaYElSubmenuSeleccionado() {
+    @Dado("que el usuario ingresa a la opcion de {} y el submenu {}")
+    public void queElUsuarioIngresaALaOpcionDeLaTarjetaYElSubmenuSeleccionado(String tarjeta,String subMenu) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                seleccionarOpcion()
+                seleccionarOpcion(tarjeta,subMenu)
         );
     }
 

@@ -5,7 +5,7 @@ Característica: Como usuario del sistema ToolsQa deseo verificar el elemento
 
   @test11
   Esquema del escenario: Escenario: Como usuario del modulo form deseo co0nfirmar
-    Dado que el usuario ingresa a la opcion de La Tarjeta y el submenu Seleccionado
+    Dado que el usuario ingresa a la opcion de <La Tarjeta> y el submenu <Seleccionado>
      # | La Tarjeta   | Seleccionado   |
      # | <La Tarjeta> | <Seleccionado> |
     Cuando Selecciono el boton subir

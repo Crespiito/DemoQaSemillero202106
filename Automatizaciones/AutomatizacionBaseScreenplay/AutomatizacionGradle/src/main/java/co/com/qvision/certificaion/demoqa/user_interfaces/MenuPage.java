@@ -8,10 +8,15 @@ public class MenuPage {
     public static final Target LBL_LEFT_SUB_MENU = Target.the("label menu izquierdo").
             locatedBy("//span[contains(text(), '{0}')]");
 
+
+
+    //MODULO ELEMENTS
+
     public static final Target LBL_LEFT_SUB_MENU_TEXT_BOX = Target.the("label menu izquierdo").
             locatedBy("//span[contains(text(), 'Text Box')]");
 
-    //MODULO ELEMENTS
+    public static final Target LBL_LEFT_SUB_MENU_RADIO_BUTTON = Target.the("label menu izquierdo Radio Button").
+            locatedBy("//span[contains(text(), 'Radio Button')]");
 
     // ELementos Text Box
     public static final Target TXT_FULL_NAME = Target.the("User name").
@@ -31,9 +36,12 @@ public class MenuPage {
     // Elementos Check Box
 
     // Elementos Radio Button
+    public static final Target BTN_RADIO_BUTTON =Target.the("Botón Radio Button").
+            locatedBy("//label[contains(@for, '{0}')]");
 
+    //label[contains(@for, 'impressiveRadio')]
     // Elementos Web Tables
-
+//label[contains(@for, 'yesRadio ')]
     // Elementos Buttons
 
     // Elementos Links

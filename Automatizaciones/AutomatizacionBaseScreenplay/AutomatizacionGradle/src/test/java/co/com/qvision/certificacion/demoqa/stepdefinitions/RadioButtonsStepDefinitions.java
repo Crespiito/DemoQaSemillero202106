@@ -3,15 +3,19 @@ package co.com.qvision.certificacion.demoqa.stepdefinitions;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.actors.OnStage;
+
+import static co.com.qvision.certificaion.demoqa.tasks.HacerClickTask.hacerClickTask;
+import static co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionTask.seleccionarOpcion;
 
 public class RadioButtonsStepDefinitions {
-    @Dado("que el usuario acceda al modulo Elements")
-    public void queElUsuarioAccedaAlModuloElements() {
 
-    }
 
-    @Cuando("despliegue la lista de Elements")
-    public void despliegueLaListaDeElements() {
+    @Cuando("despliegue la lista de Elements {}")
+    public void despliegueLaListaDeElements(String boton) {
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                hacerClickTask(boton)
+        );
 
     }
 
@@ -61,7 +65,10 @@ public class RadioButtonsStepDefinitions {
     }
 
     @Cuando("se ubique en la opcion No")
-    public void seUbiqueEnLaOpcionNo() {
+    public void seUbiqueEnLaOpcionNo(String boton) {
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                hacerClickTask(boton)
+        );
 
     }
 

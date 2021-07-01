@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class Hooks {
 
-    @Before(value= "@test11")
+    @Before(value= "@test12")
     public void abrirNavegador(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");
@@ -23,7 +23,7 @@ public class Hooks {
     public OpcionesMenuModel opcionesMenu(Map<String,String> dato) {
         return new OpcionesMenuModel(dato.get("Tarjeta"),dato.get("Seleccionado"));
     }
-    /*
+
     @Before(value = "@test2", order = 3)
     public void abrirNavegador2(){
         OnStage.setTheStage(new OnlineCast());

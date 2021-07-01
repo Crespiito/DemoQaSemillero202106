@@ -10,7 +10,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class Hooks {
 
-    @Before("@Test1")
+    @Before("@Test")
 
     public void abrirNavegador(){
         OnStage.setTheStage(new OnlineCast());
@@ -19,7 +19,7 @@ public class Hooks {
 
     }
 
-    /*@Before
+    @Before("@Test1")
 
     public void abrirNavegadorforms(){
         OnStage.setTheStage(new OnlineCast());
@@ -27,6 +27,6 @@ public class Hooks {
         theActorInTheSpotlight().attemptsTo(Open.url("https://demoqa.com/automation-practice-form"));
 
     }
-    */
+
 
 }

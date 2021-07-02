@@ -37,7 +37,7 @@ public class PracticeFormStepDefinition {
     @Entonces("confirmo si se registra el formulario con campos vacios")
     public void confirmoSiSeRegistraElFormularioConCamposVacios() {
         //Comparacion por modelo
-        FormData datos = new FormData("juan","bautista","Female", "1234567890");
+        FormData datos = new FormData("juan","bautista","hola@queteimporta.com", "Male", "1234567890","English","Sports","abc 123");
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat("la validacion de mi prueba", ValidarFormularioQuestion.validar(),sameBeanAs(datos)));
 
 

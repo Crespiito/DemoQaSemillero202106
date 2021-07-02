@@ -12,10 +12,13 @@ public class CamposTextoInteraction implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Enter.theValue("hola").into(NOMBRE),
-                Enter.theValue("holi").into(APELLIDO),
+                Enter.theValue("juan").into(NOMBRE),
+                Enter.theValue("bautista").into(APELLIDO),
                 Enter.theValue("hola@queteimporta.com").into(EMAIL),
-                Enter.theValue("2345678900").into(MOBILE),
+                Click.on(GENDER),
+                Enter.theValue("1234567890").into(MOBILE),
+
+
 
                 //Bloque para elegir fecha de cumpleaños
                 Scroll.to(DATE_BIRTH),
@@ -33,6 +36,9 @@ public class CamposTextoInteraction implements Interaction {
 
                 Enter.theValue("English").into(SUBJECTS),
                 Hit.the(Keys.ENTER).keyIn(SUBJECTS),
+
+                Scroll.to(HOBBIES),
+                Click.on(HOBBIES),
 
                 Enter.theValue("abc 123 ").into(CURRENT_ADDRESS),
 

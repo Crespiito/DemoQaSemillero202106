@@ -14,13 +14,13 @@ import static co.com.qvision.certificaion.demoqa.user_interfaces.ElementsUI.FULL
 import static co.com.qvision.certificaion.demoqa.user_interfaces.ElementsUI.CURRENT_ADDRESS;
 import static co.com.qvision.certificaion.demoqa.user_interfaces.ElementsUI.SUBMIT;
 
-public class CamposSoloTextoInteraction implements Interaction {
+public class CamposSoloTextoInteractionTB implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(BOTON_TEXTBOX),
                 Scroll.to(FULL_NAME),
-                Enter.theValue("holisssssss ").into(FULL_NAME),
+                Enter.theValue("holisssssss").into(FULL_NAME),
                 Enter.theValue("hola@queteimporta.com").into(EMAIL),
 
                 Enter.theValue("123 ABCD").into(CURRENT_ADDRESS),
@@ -32,7 +32,7 @@ public class CamposSoloTextoInteraction implements Interaction {
         );
     }
 
-    public static CamposSoloTextoInteraction camposSoloTextoInteraction(){
-        return Tasks.instrumented(CamposSoloTextoInteraction.class);
+    public static CamposSoloTextoInteractionTB camposSoloTextoInteraction(){
+        return Tasks.instrumented(CamposSoloTextoInteractionTB.class);
     }
 }

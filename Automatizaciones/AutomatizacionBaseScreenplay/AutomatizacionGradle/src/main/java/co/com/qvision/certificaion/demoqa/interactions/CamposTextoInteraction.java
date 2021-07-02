@@ -17,7 +17,7 @@ public class CamposTextoInteraction implements Interaction {
                 Enter.theValue("hola@queteimporta.com").into(EMAIL),
                 Enter.theValue("2345678900").into(MOBILE),
 
-                //Cumpleaños
+                //Bloque para elegir fecha de cumpleaños
                 Scroll.to(DATE_BIRTH),
                 DoubleClick.on(DATE_BIRTH),
                 Hit.the(Keys.DELETE).keyIn(DATE_BIRTH),
@@ -33,6 +33,7 @@ public class CamposTextoInteraction implements Interaction {
 
                 Enter.theValue("English").into(SUBJECTS),
                 Hit.the(Keys.ENTER).keyIn(SUBJECTS),
+
                 Enter.theValue("abc 123 ").into(CURRENT_ADDRESS),
 
                 Scroll.to(SELECT_STATE),
@@ -40,10 +41,10 @@ public class CamposTextoInteraction implements Interaction {
                 Click.on(OPTION_STATE),
                 Scroll.to(SELECT_CITY),
                 Click.on(SELECT_CITY),
-                Click.on(OPTION_CITY),
+                Click.on(OPTION_CITY)
 
-                Scroll.to(SUBMIT),
-                Click.on(SUBMIT)
+               // Scroll.to(SUBMIT),
+                //Click.on(SUBMIT)
 
 
 

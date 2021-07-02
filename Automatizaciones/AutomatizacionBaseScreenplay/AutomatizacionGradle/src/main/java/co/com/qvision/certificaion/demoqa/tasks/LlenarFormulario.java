@@ -2,6 +2,7 @@ package co.com.qvision.certificaion.demoqa.tasks;
 
 import co.com.qvision.certificaion.demoqa.interactions.CampoSeleccionUnica;
 import co.com.qvision.certificaion.demoqa.interactions.CamposTextoInteraction;
+import co.com.qvision.certificaion.demoqa.interactions.EnviarFormulario;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -12,7 +13,8 @@ public class LlenarFormulario implements Task {
         actor.attemptsTo(
 
                 CampoSeleccionUnica.campoSeleccionUnica(),
-                CamposTextoInteraction.camposTextoInteraction()
+                CamposTextoInteraction.camposTextoInteraction(),
+                EnviarFormulario.enviarFormulario()
         );
 
     }

@@ -1,8 +1,13 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.Elements;
 
+import co.com.qvision.certificaion.demoqa.tasks.LlenarSoloTexto;
+import co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionElementsTask;
+import co.com.qvision.certificaion.demoqa.tasks.SelectOpElementsRBTask;
+import co.com.qvision.certificaion.demoqa.tasks.SelectRadioButtonTask;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.actors.OnStage;
 
 public class RadioButtonsStepDefinition {
 
@@ -23,7 +28,8 @@ public class RadioButtonsStepDefinition {
 
     @Dado("que el usuario ubique el item Radio Button en la lista de Elements")
     public void queElUsuarioUbiqueElItemRadioButtonEnLaListaDeElements() {
-        System.out.println("entro al dado ");
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectOpElementsRBTask.seleccionarOpcion());
+        //System.out.println("entro al dado ");
     }
 
     @Cuando("seleccione el item Radio Button")
@@ -38,12 +44,15 @@ public class RadioButtonsStepDefinition {
 
     @Dado("que el usuario haya leido la pregunta ¿Te gusta el sitio? y decida entre las opciones de respuesta")
     public void queElUsuarioHayaLeidoLaPreguntaTeGustaElSitioYDecidaEntreLasOpcionesDeRespuesta() {
-        System.out.println("entro al dado ");
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectRadioButtonTask.seleccionar());
+
+       // System.out.println("entro al dado ");
     }
 
     @Cuando("marque la opcion {string}")
     public void marqueLaOpcion(String string) {
-        System.out.println("entro al cuando");
+      //  OnStage.theActorInTheSpotlight().attemptsTo(SelectRadioButtonTask.seleccionar());
+      //  System.out.println("entro al cuando");
     }
 
     @Entonces("podra ver un mensaje con la opcion seleccionada de la siguiente manera {string}")

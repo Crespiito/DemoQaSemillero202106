@@ -63,10 +63,22 @@ public class FormsUI {
             Target.the("Campo Select State").
                     locatedBy("//*[@id='react-select-4-option-1']");
 
-
-    public static final Target SUBMIT =
+//Mapeo inicial campo submit
+   /* public static final Target SUBMIT =
             Target.the("Campo Submit").
                     locatedBy("//*[@id='submit']");
+*/
+
+//Mapeo para aplicacion de acceso por ID
+    public static final Target CAMPO_POR_ID =
+            Target.the("Campo {0}").
+                    locatedBy("//*[@id='{0}']");
+
+//Mapeo de tabla HTML mostrada al darle submit al formulario, y este cumplir con lo requerido
+    public static final Target TABLE =
+            Target.the("campo tabla en posiciones {0} {1}").
+                    locatedBy(" //table/tbody/tr[{0}]/td[{1}]");
+
 
 
 

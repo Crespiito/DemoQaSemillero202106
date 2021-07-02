@@ -1,8 +1,12 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.Elements;
 
+import co.com.qvision.certificaion.demoqa.tasks.LlenarSoloTexto;
+import co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionElementsTask;
+import co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionTask;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.actors.OnStage;
 
 
 public class TextBoxStepDefinition {
@@ -14,12 +18,14 @@ public class TextBoxStepDefinition {
 
     @Dado("Yo como usuario este en el formulario desplegado de {string}")
     public void yoComoUsuarioEsteEnElFormularioDesplegadoDe(String string) {
-        System.out.println("entro al dado ");
+        OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionElementsTask.seleccionarOpcion());
+       // System.out.println("entro al dado ");
     }
 
     @Cuando("Diligencio cada uno de los campos")
     public void diligencioCadaUnoDeLosCampos() {
-        System.out.println("entro al cuando");
+        OnStage.theActorInTheSpotlight().attemptsTo(LlenarSoloTexto.llenarSoloTexto());
+        //System.out.println("entro al cuando");
     }
 
     @Entonces("Se visualizara el resumen de la informacion diligenciada")

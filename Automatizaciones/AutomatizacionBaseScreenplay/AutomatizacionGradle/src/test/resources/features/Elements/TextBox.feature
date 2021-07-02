@@ -3,12 +3,17 @@
 
 Característica: Como usuario deseo verificar del modulo
   "Elements" las funcionalidad "Text Box"
-  @TestElements
 
-  Escenario: Validar que en la lista Elements aparezca el item Text Box
-    Dado Yo como usuario ingrese al modulo "Elements"
-    Cuando Seleccione "Text Box"
+  @Test1
+  Esquema del escenario: Validar que en la lista Elements aparezca el item Text Box
+    Dado Yo como usuario este en el formulario desplegado de "Elements"
+     # |La Tarjeta|Seleccionado|
+     # |<La Tarjeta>| <Seleccionado>|
+    Cuando Diligencio cada uno de los campos
     Entonces Despliegue el formulario
+    Ejemplos:
+      |La Tarjeta|Seleccionado|
+      |Elements     |Text Box|
 
   Escenario: Diligenciar todos los campos del formulario "Text Box"
     Dado Yo como usuario este en el formulario desplegado de "Text Box"

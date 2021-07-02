@@ -7,7 +7,7 @@ Característica:  Como usuario del sistema ToolsQA deseo verificar el elemento
   Esquema del escenario: Como usuario del modulo forms deseo confirmar el envio del formulario con los campos vacios
 
 
-    Dado que el usuario ingresa al modulo Forms y al submenu Seleccionando Practice Form
+    Dado que el usuario ingresa al modulo <Tarjeta> y al submenu Seleccionando <Seleccionado>
       #|La Tarjeta|Seleccionado|
       #|<La Tarjeta>| <Seleccionado>|
 
@@ -16,7 +16,7 @@ Característica:  Como usuario del sistema ToolsQA deseo verificar el elemento
     Entonces confirmo si se registra el formulario
 
 
-   # Ejemplos:
-    #  |La Tarjeta|Seleccionado|
-     # |Forms     |Practice Form|
+    Ejemplos:
+      |Tarjeta|Seleccionado|
+      |Forms     |Practice Form|
 

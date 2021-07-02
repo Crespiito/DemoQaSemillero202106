@@ -1,17 +1,18 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions;
 
+import co.com.qvision.certificaion.demoqa.models.FormData;
 import co.com.qvision.certificaion.demoqa.questions.ValidarFormularioQuestion;
 import co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionMenuTask;
 import co.com.qvision.certificaion.demoqa.tasks.forms.LlenarFormularioTask;
-import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.GivenWhenThen;
-import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.actors.OnStage;
-import org.hamcrest.Matchers;
 
-import java.util.regex.Matcher;
+import static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
+
+
 
 public class PracticeFormStepDefinition {
 
@@ -31,8 +32,9 @@ public class PracticeFormStepDefinition {
     }
 
     @Entonces("confirmo si se registra el formulario")
-    public void comoUsusarioEnvioElFormulario() {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat("Validacion de mi prueba", ValidarFormularioQuestion.validar(),Matchers.is("null")));
+    public void confirmoSiSeRegistraElFormulario() {
+        FormData datos = new FormData("juan","pedraza","Female");
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat("la validacion de mi prueba", ValidarFormularioQuestion.validar(),sameBeanAs(datos)));
     }
 
 

@@ -35,11 +35,18 @@ public class FormPage {
     public static final Target CITY = Target.the("OPTION STATED").locatedBy("//*[@id='react-select-4-option-1']");
     public static final Target CITYSELECT = Target.the("SELECTOR STATED").locatedBy("//div[text() ='Select City']");
 
-
-
     public static final Target SUBMIT = Target.the("ClICK ENVIAR").locatedBy
             ("//*[@id='submit']");
 
+
+
+
+
+
+    public static final Target CAMPO_POR_ID = Target.the("campo {0}").locatedBy
+            ("//*[@id='{0}']");
+    public static final Target TABLE = Target.the("campo tabla en posiciones {0} {1}").locatedBy
+            (" //table/tbody/tr[{0}]/td[{1}]");
 
 
 

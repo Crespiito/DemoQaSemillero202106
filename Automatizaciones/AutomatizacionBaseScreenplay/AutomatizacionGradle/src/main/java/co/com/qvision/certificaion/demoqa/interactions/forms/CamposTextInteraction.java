@@ -51,6 +51,7 @@ public class CamposTextInteraction implements Interaction {
                     Click.on(CITY),
                     Click.on(SUBMIT)
 
+
         );
     }
 

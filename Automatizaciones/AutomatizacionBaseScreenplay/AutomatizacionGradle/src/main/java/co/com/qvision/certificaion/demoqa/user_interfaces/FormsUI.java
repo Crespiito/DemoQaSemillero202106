@@ -34,13 +34,13 @@ public class FormsUI {
 
     //Solo para opcion male
     public static final Target GENDER =
-            Target.the("Campo Gender Male").
-                    locatedBy("//label[@class='custom-control-label']");
+            Target.the("Campo Gender {0}").
+                    locatedBy("//*[@for='gender-radio-{0}']");
 
     //Solo para opcion sports
     public static final Target HOBBIES =
-            Target.the("Campo Hobbies Sports").
-                    locatedBy("//*[@id=\"hobbiesWrapper\"]/div[2]/div[1]/label");
+            Target.the("Campo Hobbies {0}").
+                    locatedBy("//*[@for=\"hobbies-checkbox-{0}\"]");
 
 
     public static final Target DATE_BIRTH =

@@ -29,15 +29,18 @@ public class PracticeFormStepDefinition {
 
 
     @Cuando("lleno el formulario")
-    public void llenoElFormulario() {
-        OnStage.theActorInTheSpotlight().attemptsTo(LlenarFormulario.llenarFormulario());
+    public void llenoElFormulario(FormData datos) {
+        OnStage.theActorInTheSpotlight().attemptsTo(LlenarFormulario.llenarFormulario(datos));
 
     }
 
+
+    //Para comparacion por modelo y directa se usa el void sin parametros de entrada()
     @Entonces("confirmo si se registra el formulario con campos vacios")
-    public void confirmoSiSeRegistraElFormularioConCamposVacios() {
+    public void confirmoSiSeRegistraElFormularioConCamposVacios(FormData datos) {
         //Comparacion por modelo
-        FormData datos = new FormData("juan","bautista","hola@queteimporta.com", "Male", "1234567890","English","Sports","abc 123");
+        //FormData datos = new FormData("juan","bautista","hola@queteimporta.com", "Male", "1234567890","English","Sports","abc 123");
+
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat("la validacion de mi prueba", ValidarFormularioQuestion.validar(),sameBeanAs(datos)));
 
 

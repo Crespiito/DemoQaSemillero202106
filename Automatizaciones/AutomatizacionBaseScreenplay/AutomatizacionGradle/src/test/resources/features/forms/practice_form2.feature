@@ -9,10 +9,15 @@ Característica: Como usuario del sistema ToolsQa deseo verificar el elemento
       | La Tarjeta   | Seleccionado   |
       | <La Tarjeta> | <Seleccionado> |
     Cuando Selecciono el boton subir
+      | Nombre   | Apellido   | Genero   | Mobile   | Email   | Subject   | CurrentAddres   |
+      | <Nombre> | <Apellido> | <Genero> | <Mobile> | <Email> | <Subject> | <CurrentAddres> |
     Entonces Confirmo su se registro el formulario con campos vacios
+      | Nombre   | Apellido   | Genero   | Mobile   | Email   | Subject   | CurrentAddres   |
+      | <Nombre> | <Apellido> | <Genero> | <Mobile> | <Email> | <Subject> | <CurrentAddres> |
     Ejemplos:
-      | La Tarjeta | Seleccionado  |
-      | Forms      | Practice Form |
+      | La Tarjeta | Seleccionado  | Nombre | Apellido  | Genero | Mobile     | Email         | Subject | CurrentAddres  |
+      | Forms      | Practice Form | Juan   | Hernandez | Male   | 1111111111 | juan@mail.com | English | Calle 1 #12-12 |
+
      # | Elements   | Text Box      |
      # | Elements   | Check Box     |
 

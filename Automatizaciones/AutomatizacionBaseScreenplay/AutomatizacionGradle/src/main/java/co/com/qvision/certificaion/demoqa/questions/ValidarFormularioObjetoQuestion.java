@@ -15,12 +15,36 @@ public class ValidarFormularioObjetoQuestion implements Question<FormDataModel> 
     }
 
     public String textoGenero(Actor actor) {
-        return Text.of(POSITION_TABLE.of("3","2")).viewedBy(actor).asString();
+        return Text.of(POSITION_TABLE.of("3", "2")).viewedBy(actor).asString();
+    }
+
+    public String textoMobile(Actor actor) {
+        return Text.of(POSITION_TABLE.of("4", "2")).viewedBy(actor).asString();
+    }
+
+    public String textoEmail(Actor actor) {
+        return Text.of(POSITION_TABLE.of("2", "2")).viewedBy(actor).asString();
+    }
+
+    public String textoSubject(Actor actor) {
+        return Text.of(POSITION_TABLE.of("6", "2")).viewedBy(actor).asString();
+    }
+
+    public String textoCurrentAddres(Actor actor) {
+        return Text.of(POSITION_TABLE.of("9", "2")).viewedBy(actor).asString();
     }
 
     @Override
     public FormDataModel answeredBy(Actor actor) {
-        return new FormDataModel(textoNombre(actor,0),textoNombre(actor,1),textoGenero(actor)) ;
+        return new FormDataModel(
+                textoNombre(actor, 0),
+                textoNombre(actor, 1),
+                textoGenero(actor),
+                textoMobile(actor),
+                textoEmail(actor),
+                textoSubject(actor),
+                textoCurrentAddres(actor)
+        );
     }
 
     public static ValidarFormularioObjetoQuestion validarFormularioObjetoQuestion() {

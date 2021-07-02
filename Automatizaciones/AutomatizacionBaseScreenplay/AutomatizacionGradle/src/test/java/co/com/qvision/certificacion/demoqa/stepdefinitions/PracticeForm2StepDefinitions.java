@@ -18,24 +18,23 @@ public class PracticeForm2StepDefinitions {
     @Dado("que el usuario ingresa a la opcion de La Tarjeta y el submenu Seleccionado")
     public void queElUsuarioIngresaALaOpcionDeLaTarjetaYElSubmenuSeleccionado(OpcionesMenuModel opciones) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                seleccionarOpcion(opciones.getOpcion(),opciones.getSubmenu())
+                seleccionarOpcion(opciones.getOpcion(), opciones.getSubmenu())
         );
     }
 
     @Cuando("Selecciono el boton subir")
-    public void seleccionoElBotonSubir() {
+    public void seleccionoElBotonSubir(FormDataModel opcion) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                diligenciarCamposTask()
+                diligenciarCamposTask(opcion)
         );
     }
 
     @Entonces("Confirmo su se registro el formulario con campos vacios")
-    public void confirmoSuSeRegistroElFormularioConCamposVacios() {
-        FormDataModel datos = new FormDataModel("Juan","Hernandez","Male");
+    public void confirmoSuSeRegistroElFormularioConCamposVacios(FormDataModel opcion) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(
                 "La validación de mi prueba",
                 ValidarFormularioObjetoQuestion.validarFormularioObjetoQuestion(),
-                sameBeanAs(datos)
+                sameBeanAs(opcion)
         ));
        /*
         Este compara string, value, boolean

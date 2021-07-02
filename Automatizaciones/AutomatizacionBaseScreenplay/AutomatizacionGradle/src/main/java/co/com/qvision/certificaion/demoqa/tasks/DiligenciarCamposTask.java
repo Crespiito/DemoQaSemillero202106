@@ -1,5 +1,6 @@
 package co.com.qvision.certificaion.demoqa.tasks;
 
+import co.com.qvision.certificaion.demoqa.models.FormDataModel;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 
@@ -11,19 +12,25 @@ import static co.com.qvision.certificaion.demoqa.interactions.CamposTextoInterac
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class DiligenciarCamposTask implements Task {
+
+    FormDataModel opcion;
+
+    public DiligenciarCamposTask(FormDataModel opcion) {
+        this.opcion = opcion;
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                camposTextoInteractions(),
-                camposBinariosInteractions(),
-                camposListasInteraction(),
-                campoFechaInteractions(),
+                camposTextoInteractions(opcion),
+                camposBinariosInteractions(opcion),
+                camposListasInteraction(opcion),
+                campoFechaInteractions(opcion),
                 botonSubmitInteraction()
         );
     }
 
-    public static DiligenciarCamposTask diligenciarCamposTask() {
-        return instrumented(DiligenciarCamposTask.class
-        );
+    public static DiligenciarCamposTask diligenciarCamposTask(FormDataModel opcion) {
+        return instrumented(DiligenciarCamposTask.class,opcion);
     }
 }

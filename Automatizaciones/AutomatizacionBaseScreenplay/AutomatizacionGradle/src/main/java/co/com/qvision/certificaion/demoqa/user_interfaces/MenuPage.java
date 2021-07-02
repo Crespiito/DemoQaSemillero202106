@@ -88,12 +88,7 @@ public class MenuPage {
     public static final Target SELECCIONAR_DEPARTAMENTOS = Target.the("Departamento").
             locatedBy("//*[@id='react-select-3-option-2']");
 
-    //*[@id="email"]
 
-    //*[text() = 'NCR']
-    //div[text() = 'Select State']
-    //*[@id="state"]
-    //*[@id="react-select-9-input"]
 
     public static final Target CITY = Target.the("City").
             locatedBy("//div[text() = 'Select City']");

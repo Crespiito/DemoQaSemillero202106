@@ -1,5 +1,6 @@
 package co.com.qvision.certificaion.demoqa.interactions;
 
+import co.com.qvision.certificaion.demoqa.models.FormDataModel;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.*;
@@ -9,6 +10,13 @@ import static co.com.qvision.certificaion.demoqa.user_interfaces.MenuPage.FECHA;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class CampoFechaInteractions implements Interaction {
+
+    FormDataModel opcion;
+
+    public CampoFechaInteractions(FormDataModel opcion) {
+        this.opcion = opcion;
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -26,7 +34,7 @@ public class CampoFechaInteractions implements Interaction {
         );
     }
 
-    public static CampoFechaInteractions campoFechaInteractions(){
-        return instrumented(CampoFechaInteractions.class);
+    public static CampoFechaInteractions campoFechaInteractions(FormDataModel opcion) {
+        return instrumented(CampoFechaInteractions.class, opcion);
     }
 }

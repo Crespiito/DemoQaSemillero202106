@@ -1,5 +1,6 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.hooks;
 
+import co.com.qvision.certificaion.demoqa.models.FormDataModel;
 import co.com.qvision.certificaion.demoqa.models.OpcionRadioButtonModel;
 import co.com.qvision.certificaion.demoqa.models.OpcionesMenuModel;
 import io.cucumber.java.Before;
@@ -13,20 +14,32 @@ import java.util.Map;
 
 public class Hooks {
 
-    @Before(value= "@test12")
-    public void abrirNavegador(){
+    @Before(value = "@test11")
+    public void abrirNavegador() {
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
 
     @DataTableType
-    public OpcionesMenuModel opcionesMenu(Map<String,String> dato) {
-        return new OpcionesMenuModel(dato.get("La Tarjeta"),dato.get("Seleccionado"));
+    public OpcionesMenuModel opcionesMenu(Map<String, String> dato) {
+        return new OpcionesMenuModel(dato.get("La Tarjeta"), dato.get("Seleccionado"));
     }
 
     @DataTableType
-    public OpcionRadioButtonModel opcionRadioButton(Map<String,String> dato) {
+    public FormDataModel formDataModel(Map<String, String> dato) {
+        return new FormDataModel(
+                dato.get("Nombre"),
+                dato.get("Apellido"),
+                dato.get("Genero"),
+                dato.get("Mobile"),
+                dato.get("Email"),
+                dato.get("Subject"),
+                dato.get("CurrentAddres"));
+    }
+
+    @DataTableType
+    public OpcionRadioButtonModel opcionRadioButton(Map<String, String> dato) {
         return new OpcionRadioButtonModel(dato.get("Boton"));
     }
 /*
@@ -45,7 +58,6 @@ public class Hooks {
     }
 */
     //@After
-
 
 
 }

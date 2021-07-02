@@ -1,6 +1,7 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions;
 
 import co.com.qvision.certificaion.demoqa.models.FormData;
+import co.com.qvision.certificaion.demoqa.models.OpcionMenuModel;
 import co.com.qvision.certificaion.demoqa.questions.ValidarFormularioQuestion;
 import co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionMenuTask;
 import co.com.qvision.certificaion.demoqa.tasks.forms.LlenarFormularioTask;
@@ -16,24 +17,20 @@ import static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
 
 public class PracticeFormStepDefinition {
 
-    @Dado("que el usuario ingresa al modulo {} y al submenu Seleccionando {}")
-    public void queElUsuarioIngresaAlModuloFormsYAlSubmenuSeleccionandoPracticeForm(String opcion, String opcion2) {
-        OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionMenuTask.menu(opcion, opcion2));
+    @Dado("que el usuario ingresa al modulo de La Tarjeta y al submenu Seleccionando")
+    public void queElUsuarioIngresaAlModuloFormsYAlSubmenuSeleccionandoPracticeForm(OpcionMenuModel opciones) {
+        OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionMenuTask.menu(opciones));
     }
 
-    @Cuando("selecciono el boton submit")
-    public void seleccionoElBotonSubmite(){
 
-
-    }
     @Cuando("lleno el formulario")
-    public void llenoElFormulario() {
-        OnStage.theActorInTheSpotlight().attemptsTo(LlenarFormularioTask.llenarFormularioTask());
+    public void llenoElFormulario(FormData datos) {
+        OnStage.theActorInTheSpotlight().attemptsTo(LlenarFormularioTask.llenarFormularioTask(datos));
     }
 
     @Entonces("confirmo si se registra el formulario")
-    public void confirmoSiSeRegistraElFormulario() {
-        FormData datos = new FormData("juan","pedraza","Female");
+    public void confirmoSiSeRegistraElFormulario(FormData datos) {
+
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat("la validacion de mi prueba", ValidarFormularioQuestion.validar(),sameBeanAs(datos)));
     }
 

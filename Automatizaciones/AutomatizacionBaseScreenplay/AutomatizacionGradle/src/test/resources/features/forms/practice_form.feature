@@ -6,17 +6,20 @@ Característica:  Como usuario del sistema ToolsQA deseo verificar el elemento
   @Test
   Esquema del escenario: Como usuario del modulo forms deseo confirmar el envio del formulario con los campos vacios
 
-
-    Dado que el usuario ingresa al modulo <Tarjeta> y al submenu Seleccionando <Seleccionado>
-      #|La Tarjeta|Seleccionado|
-      #|<La Tarjeta>| <Seleccionado>|
+    Dado que el usuario ingresa al modulo de La Tarjeta y al submenu Seleccionando
+      |La Tarjeta|Seleccionado|
+      |<La Tarjeta>| <Seleccionado>|
 
     Cuando lleno el formulario
 
-    Entonces confirmo si se registra el formulario
+    |nombre|apellido|correo|telefono|genero|
+    |<nombre>|<apellido>|<correo>|<telefono>|<genero>|
 
+    Entonces confirmo si se registra el formulario
+      |nombre|apellido|correo|telefono|genero|
+      |<nombre>|<apellido>|<correo>|<telefono>|<genero>|
 
     Ejemplos:
-      |Tarjeta|Seleccionado|
-      |Forms     |Practice Form|
+      |La Tarjeta|Seleccionado|nombre|apellido|correo|telefono|genero|
+      |Forms|Practice Form|juan|bautista|correo@correo.com|1232453453|Female|
 

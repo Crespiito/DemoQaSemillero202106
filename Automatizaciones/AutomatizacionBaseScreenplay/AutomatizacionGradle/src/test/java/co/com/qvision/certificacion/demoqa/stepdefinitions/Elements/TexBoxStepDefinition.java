@@ -10,8 +10,8 @@ import net.serenitybdd.screenplay.actors.OnStage;
 
 public class TexBoxStepDefinition {
     @Dado("Yo como usuario en el modulo {} en el formulario desplegado de {}")
-    public void yoComoUsuarioEnElModuloElementsEnElFormularioDesplegadoDeTextBox(String opcion,String opcion2) {
-       OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionMenuTask.menu(opcion, opcion2));
+    public void yoComoUsuarioEnElModuloElementsEnElFormularioDesplegadoDeTextBox() {
+       //OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionMenuTask.menu(opcion, opcion2));
 
     }
 

@@ -13,7 +13,7 @@ public class FormPage {
             ("//*[@id='userEmail']");
 
     public static final Target GENDER = Target.the("Seleccion de Gender").locatedBy
-            ("//*[@for='gender-radio-2']");
+            ("//*[@for='gender-radio-{0}']");
     public static final Target NUMBER = Target.the("Campo de Mobile").locatedBy
             ("//*[@id='userNumber']");
     public static final  Target SUBJECT = Target.the("Campo materias").locatedBy
@@ -39,14 +39,11 @@ public class FormPage {
             ("//*[@id='submit']");
 
 
-
-
-
-
     public static final Target CAMPO_POR_ID = Target.the("campo {0}").locatedBy
             ("//*[@id='{0}']");
-    public static final Target TABLE = Target.the("campo tabla en posiciones {0} {1}").locatedBy
-            (" //table/tbody/tr[{0}]/td[{1}]");
+
+
+    public static final Target TABLE = Target.the("campo en la posicion {0} {1}").locatedBy("//table/tbody/tr[{0}]/td[{1}]");
 
 
 

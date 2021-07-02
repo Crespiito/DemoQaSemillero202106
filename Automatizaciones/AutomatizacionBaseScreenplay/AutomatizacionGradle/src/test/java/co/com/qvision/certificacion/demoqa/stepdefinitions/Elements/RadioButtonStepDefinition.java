@@ -12,8 +12,8 @@ import net.serenitybdd.screenplay.actors.OnStage;
 public class RadioButtonStepDefinition {
 
     @Dado("que el usuario accede al modulo {} en el item {}")
-    public void queElUsuarioAccedeAlModuloElementsEnElItemRadioButton(String opcion, String opcion2) {
-        OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionMenuTask.menu(opcion, opcion2));
+    public void queElUsuarioAccedeAlModuloElementsEnElItemRadioButton() {
+        //OnStage.theActorInTheSpotlight().attemptsTo(SeleccionarOpcionMenuTask.menu(opcion, opcion2));
     }
 
     @Cuando("selecciona el radio button Impressive")

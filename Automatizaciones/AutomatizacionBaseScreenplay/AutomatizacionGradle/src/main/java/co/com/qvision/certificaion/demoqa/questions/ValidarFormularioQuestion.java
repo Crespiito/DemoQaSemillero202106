@@ -12,13 +12,27 @@ public class ValidarFormularioQuestion implements Question<FormData> {
         return Text.of(TABLE.of("1","2")).viewedBy(actor).asString().split(" ")[pos];
     }
 
+    public String textocorreo(Actor actor){
+        return Text.of(TABLE.of("2","2")).viewedBy(actor).asString();
+    }
+
     public String textoGenero(Actor actor){
         return Text.of(TABLE.of("3","2")).viewedBy(actor).asString();
     }
 
+    public String textotelefono(Actor actor){
+        return Text.of(TABLE.of("4","2")).viewedBy(actor).asString();
+    }
+
+
     @Override
     public FormData answeredBy(Actor actor) {
-        return new FormData(textoNombre(actor,0),textoNombre(actor,1),textoGenero(actor));
+        return new FormData(
+                textoNombre(actor,0),
+                textoNombre(actor,1),
+                textocorreo(actor),
+                textotelefono(actor),
+                textoGenero(actor)) ;
     }
 
     public static ValidarFormularioQuestion validar(){

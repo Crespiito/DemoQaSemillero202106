@@ -1,6 +1,7 @@
 package co.com.qvision.certificaion.demoqa.interactions.forms;
 
 
+import co.com.qvision.certificaion.demoqa.models.OpcionMenuModel;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Click;
@@ -11,25 +12,24 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SeleccionarOpcionesInicialesInteraction implements Interaction {
 
-    String opcion;
-    String opcion2;
+  OpcionMenuModel opciones;
 
-    public SeleccionarOpcionesInicialesInteraction(String opcion, String opcion2){
-        this.opcion = opcion;
-        this.opcion2 = opcion2;
+    public SeleccionarOpcionesInicialesInteraction(OpcionMenuModel opciones) {
+        this.opciones = opciones;
     }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
            actor.attemptsTo(
 
-                   Scroll.to(BTN_FORM.of(opcion)),
-                   Click.on(BTN_FORM.of(opcion)),
-                   Click.on(BTN_ITEMLATERAL.of(opcion2))
+                   Scroll.to(BTN_FORM.of(opciones.getOpcion())),
+                   Click.on(BTN_FORM.of(opciones.getOpcion())),
+                   Click.on(BTN_ITEMLATERAL.of(opciones.getSubmenu()))
            );
 
     }
 
-    public static  SeleccionarOpcionesInicialesInteraction menu(String opcion, String opcion2){
-        return instrumented(SeleccionarOpcionesInicialesInteraction.class, opcion,opcion2);
+    public static  SeleccionarOpcionesInicialesInteraction menu(OpcionMenuModel opciones){
+        return instrumented(SeleccionarOpcionesInicialesInteraction.class, opciones);
     }
 }

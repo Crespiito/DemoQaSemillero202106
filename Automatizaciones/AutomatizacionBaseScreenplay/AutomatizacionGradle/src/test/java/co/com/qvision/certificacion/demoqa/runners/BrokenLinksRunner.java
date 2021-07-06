@@ -8,8 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/elements/BrokenLinks.feature",
         glue = "co.com.qvision.certificacion.demoqa.stepdefinitions",
-        snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@test3"
+        snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 
 public class BrokenLinksRunner {

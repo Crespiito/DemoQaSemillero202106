@@ -14,10 +14,11 @@ public class RadioButtonsStepDefinitions {
 
     @Cuando("despliegue la lista de Elements Boton")
     public void despliegueLaListaDeElements(OpcionRadioButtonModel opcion) {
+       /*
         OnStage.theActorInTheSpotlight().attemptsTo(
                 hacerClickTask(opcion.getBoton())
         );
-
+*/
     }
 
     @Entonces("valido que este presente el item Radio Button")
@@ -67,10 +68,11 @@ public class RadioButtonsStepDefinitions {
 
     @Cuando("se ubique en la opcion No")
     public void seUbiqueEnLaOpcionNo(OpcionRadioButtonModel opcion) {
+       /*
         OnStage.theActorInTheSpotlight().attemptsTo(
                 hacerClickTask(opcion.getBoton())
         );
-
+*/
     }
 
     @Entonces("podra visualizar el simbolo de prohibido indicandole que no puede seleccionar esa opcion")

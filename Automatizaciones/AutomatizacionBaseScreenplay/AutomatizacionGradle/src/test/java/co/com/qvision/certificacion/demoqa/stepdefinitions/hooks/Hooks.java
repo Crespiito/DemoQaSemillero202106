@@ -42,22 +42,21 @@ public class Hooks {
     public OpcionRadioButtonModel opcionRadioButton(Map<String, String> dato) {
         return new OpcionRadioButtonModel(dato.get("Boton"));
     }
-/*
-    @Before(value = "@test2", order = 3)
+
+    @Before(value = "@test12", order = 4)
     public void abrirNavegador2(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
 
-    @Before(value = "@test3", order = 1)
+    @Before(value = "@test", order = 1)
     public void abrirNavegador3(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
-*/
-    //@After
+
 
 
 }

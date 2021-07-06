@@ -21,5 +21,5 @@ Característica: Como usuario del sistema ToolQA el elemento practice form del m
     Ejemplos:
       | La Tarjeta | Seleccionada  | nombre | apellido | correo        | mobil      | genero |
       | Forms      | Practice Form | miguel | bautista | mb@hotmai.com | 3216549873 | Male   |
-       |Forms|Practice Form|angel|moreno|am@hotmai.com|3216549873|god|
-      |Forms|Practice Form|abendrot|fallen|af@hotmai.com|3216549873|Male|
+      | Forms      |Practice Form  | angel  | moreno   | am@hotmai.com |3216549873  | Female   |
+      #| Forms      |Practice Form  |abendrot| fallen   | af@hotmai.com |3216549873  | other   |

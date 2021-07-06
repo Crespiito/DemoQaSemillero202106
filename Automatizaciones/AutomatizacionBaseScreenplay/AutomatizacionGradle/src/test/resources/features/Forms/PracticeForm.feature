@@ -20,6 +20,8 @@ Característica: Como usuario del sistema ToolsQA deseo verificar el elemento
       |Forms     |Practice Form|juan|bautista3|correo@hotmial.es|Male|1234567892|Physics|Sports|123 ABC|
       |Forms     |Practice Form|juan|bautista4|correo@randomnose.es|Male|1234567840|Arts|Music|123 ABC|
       |Forms     |Practice Form|juan|bautista5|correo@yahoo.es|Male|1234567890|Hindi|Music|123 ABC|
+      |Forms     |Practice Form|juan|bautista6|coeo@yahoo.es|Male|1234567860|Hindi|Music|123 ABCD|
+      |Forms     |Practice Form|juan|bautista7|coetto@yahoo.es|Male|1234555860|Hindi|Music|123 ABCDe|
 
 
 

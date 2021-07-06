@@ -43,7 +43,7 @@ public class Hooks {
         return new OpcionRadioButtonModel(dato.get("Boton"));
     }
 
-    @Before(value = "@test12", order = 4)
+    @Before(value = "@test12", order = 3)
     public void abrirNavegador2(){
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");

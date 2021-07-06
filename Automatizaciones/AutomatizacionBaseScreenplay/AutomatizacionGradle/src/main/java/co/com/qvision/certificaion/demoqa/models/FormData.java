@@ -8,6 +8,7 @@ public class FormData {
     String telefono;
     String genero;
 
+
     public FormData(String nombre, String apellido,String correo, String telefono, String genero) {
         this.nombre = nombre;
         this.apellido = apellido;

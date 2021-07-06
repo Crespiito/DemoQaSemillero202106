@@ -2,7 +2,7 @@
 
 
 
-Característica:Se describen los escenarios de prueba enfocados en el sub modulo Upload & Download de la seccion Elements de la pagina https://demoqa.com/
+Característica:Se describen los escenarios de prueba enfocados en el sub modulo Upload & Download de la seccion Elements de la pagina
   @TestElements
 
   Escenario: Yo como usuario deseo descargar un elemento

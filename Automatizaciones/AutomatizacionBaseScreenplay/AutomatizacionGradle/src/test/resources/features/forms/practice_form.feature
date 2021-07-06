@@ -1,24 +1,25 @@
 #language: es
 #enconding: iso-8859-1
-Característica:  Como usuario del sistema ToolsQA deseo verificar el elemento
-  practice form del modulo Forms para confirmar su correco funcionamiento
-
-  Antecedentes:
-    Dado que como usuario en el modulo forms y en el item practices form
+Característica: Como usuario del sistema ToolQA el elemento practice form del modulo Forms para confirmar
+  su correcto funcionamiento
 
 
-  Escenario:Como usuario del modulo form deseo confirmar el envio del formulario con los campos vacíos
-    Cuando selecciono el boton submit
-    Entonces confirmo si se registra el formulario con campos vacios
+  @Test1
+  Esquema del escenario: Escenario: como usuario del modulo form deseo confirmar el envio del formulario
+    Dado que el usuario ingresa al modulo Forms en el item Practice Form
+      | La Tarjeta   | Seleccionada   |
+      | <La Tarjeta> | <Seleccionada> |
 
-  Escenario:Como usuario del modulo form y el elemento practice form
-  deseo confirmar el registro del formulario con todos los campos dilegenciados
+    Cuando lleno el formulario
+      | nombre   | apellido   | correo   | mobil   | genero   |
+      | <nombre> | <apellido> | <correo> | <mobil> | <genero> |
 
-    Cuando ingreso los datos validos en cada campo
-    Entonces confirmo si el registro se realiza con exito
+    Entonces confirmo si se envio el formulario
+      | nombre   | apellido   | correo   | mobil   | genero   |
+      | <nombre> | <apellido> | <correo> | <mobil> | <genero> |
 
-  Escenario:Como usuario del modulo form y el elemento practice form
-  deseo confirmar el registro del formulario con todos los campos dilegenciados erroneamente
-
-    Cuando ingreso datos invalidos en los campos
-    Entonces confirmo si el registro se realiza con exito
+    Ejemplos:
+      | La Tarjeta | Seleccionada  | nombre | apellido | correo        | mobil      | genero |
+      | Forms      | Practice Form | miguel | bautista | mb@hotmai.com | 3216549873 | Male   |
+      | Forms      |Practice Form  | angel  | moreno   | am@hotmai.com |3216549873  | Female   |
+      #| Forms      |Practice Form  |abendrot| fallen   | af@hotmai.com |3216549873  | other   |

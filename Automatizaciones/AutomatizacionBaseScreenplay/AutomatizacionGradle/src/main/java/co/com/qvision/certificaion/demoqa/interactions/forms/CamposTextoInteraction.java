@@ -13,30 +13,36 @@ public class CamposTextoInteraction implements Interaction {
 String genero;
     DataForm dataForm;
 
+
     public CamposTextoInteraction(DataForm dataForm) {
         this.dataForm = dataForm;
     }
 
+
+    public String defineGenero(){
+        switch (dataForm.getGenero()){
+            case ("Male"):
+                genero = "1";
+                break;
+            case ("Female"):
+                genero = "2";
+                break;
+            default:
+                genero = "3";
+                break;
+
+        }
+        return genero;
+    }
     @Override
     public <T extends Actor> void performAs(T actor) {
-      switch (dataForm.getGenero()){
-          case ("Male"):
-              genero = "1";
-              break;
-          case ("Female"):
-              genero = "2";
-              break;
-          default:
-              genero = "3";
-              break;
 
-      }
         actor.attemptsTo(
 
               Enter.theValue(dataForm.getNombre()).into(NOMBRE),
               Enter.theValue(dataForm.getApellido()).into(APELLIDO),
               Enter.theValue(dataForm.getCorreo()).into(CORREO),
-              Click.on(GENERO.of(genero)),
+              Click.on(GENERO.of(defineGenero())),
               Enter.theValue(dataForm.getMobil()).into(MOVIL),
               Click.on(CUMPLE),
               DoubleClick.on(CUMPLE),

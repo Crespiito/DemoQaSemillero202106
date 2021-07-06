@@ -4,6 +4,8 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 public class ModalsDialogStepDefinition {
 
+
+
     @Dado("que como usuario del modulo Alerts frame  windows")
     public void queComoUsuarioDelModuloAlertsFrameWindows() {
         System.out.println("Por aca entró el dado");
@@ -18,4 +20,7 @@ public class ModalsDialogStepDefinition {
     public void verificoLosMensajesEnLosAlerts() {
         System.out.println("Por aca entró el entonces ");
     }
+
+
+
 }

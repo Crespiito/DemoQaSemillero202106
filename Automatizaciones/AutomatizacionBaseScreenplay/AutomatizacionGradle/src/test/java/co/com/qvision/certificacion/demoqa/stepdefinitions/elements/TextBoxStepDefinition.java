@@ -1,5 +1,6 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.elements;
 
+import co.com.qvision.certificaion.demoqa.models.MenuModel;
 import co.com.qvision.certificaion.demoqa.tasks.MenuTask;
 import co.com.qvision.certificaion.demoqa.tasks.elements.TexBoxTask;
 import co.com.qvision.certificaion.demoqa.tasks.forms.LlenarFormularioTask;
@@ -10,8 +11,8 @@ import net.serenitybdd.screenplay.actors.OnStage;
 
 public class TextBoxStepDefinition {
     @Dado("Yo como usuario que ingreso al modulo {} en el item {}")
-    public void yoComoUsuarioQueIngresoAlModuloElementsEnElItemTextBox(String opcion,String opcion2) {
-        OnStage.theActorInTheSpotlight().attemptsTo(MenuTask.seleccionarOpcion(opcion,opcion2));
+    public void yoComoUsuarioQueIngresoAlModuloElementsEnElItemTextBox() {
+        //OnStage.theActorInTheSpotlight().attemptsTo(MenuTask.seleccionarOpcion(menuModel));
     }
 
     @Cuando("lleno los Text Box")

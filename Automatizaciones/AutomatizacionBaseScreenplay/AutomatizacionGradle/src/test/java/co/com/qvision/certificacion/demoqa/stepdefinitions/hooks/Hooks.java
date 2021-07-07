@@ -3,6 +3,7 @@ package co.com.qvision.certificacion.demoqa.stepdefinitions.hooks;
 import co.com.qvision.certificaion.demoqa.models.FormDataModel;
 import co.com.qvision.certificaion.demoqa.models.OpcionRadioButtonModel;
 import co.com.qvision.certificaion.demoqa.models.OpcionesMenuModel;
+import co.com.qvision.certificaion.demoqa.models.TextBoxModel;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
 import lombok.Value;
@@ -27,6 +28,16 @@ public class Hooks {
     }
 
     @DataTableType
+    public TextBoxModel textBoxModel(Map<String, String> dato) {
+        return new TextBoxModel(
+                dato.get("Name"),
+                dato.get("Mail"),
+                dato.get("CuAdd"),
+                dato.get("PeAdd")
+        );
+    }
+
+    @DataTableType
     public FormDataModel formDataModel(Map<String, String> dato) {
         return new FormDataModel(
                 dato.get("Nombre"),
@@ -44,19 +55,18 @@ public class Hooks {
     }
 
     @Before(value = "@test12", order = 3)
-    public void abrirNavegador2(){
+    public void abrirNavegador2() {
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
 
     @Before(value = "@test", order = 1)
-    public void abrirNavegador3(){
+    public void abrirNavegador3() {
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("mateo");
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
-
 
 
 }

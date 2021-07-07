@@ -1,6 +1,7 @@
 package co.com.qvision.certificaion.demoqa.tasks;
 
 import co.com.qvision.certificaion.demoqa.models.OpcionesMenuModel;
+import co.com.qvision.certificaion.demoqa.models.TextBoxModel;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -17,7 +18,13 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class DiligenciarFormularioTextBoxTask implements Task {
 
-     @Override
+    TextBoxModel option;
+
+    public DiligenciarFormularioTextBoxTask(TextBoxModel option) {
+        this.option = option;
+    }
+
+    @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 //Directo de UserInterface
@@ -25,13 +32,13 @@ public class DiligenciarFormularioTextBoxTask implements Task {
                 Click.on(BTN_TARJETA_ELEMENTS),
                 Scroll.to(LBL_LEFT_SUB_MENU_TEXT_BOX),
                 Click.on(LBL_LEFT_SUB_MENU_TEXT_BOX),
-                llenarTextBox(),
+                llenarTextBox(option),
                 clickEnBotonesInteractions()
         );
 
     }
 
-    public static DiligenciarFormularioTextBoxTask llenarFormularioTxtBox() {
-        return instrumented(DiligenciarFormularioTextBoxTask.class);
+    public static DiligenciarFormularioTextBoxTask llenarFormularioTxtBox(TextBoxModel option) {
+        return instrumented(DiligenciarFormularioTextBoxTask.class, option);
     }
 }

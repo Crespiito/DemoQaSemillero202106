@@ -31,8 +31,7 @@ public class PracticeForm2StepDefinitions {
 
     @Entonces("Confirmo su se registro el formulario con campos vacios")
     public void confirmoSuSeRegistroElFormularioConCamposVacios(FormDataModel opcion) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(
-                "La validación de mi prueba",
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat("La validación de mi prueba",
                 ValidarFormularioObjetoQuestion.validarFormularioObjetoQuestion(),
                 sameBeanAs(opcion)
         ));

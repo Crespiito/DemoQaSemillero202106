@@ -19,19 +19,23 @@ public class ValidarFormularioObjetoQuestion implements Question<FormDataModel> 
     }
 
     public String textoMobile(Actor actor) {
-        return Text.of(POSITION_TABLE.of("4", "2")).viewedBy(actor).asString();
+        return Text.of(POSITION_TABLE.of("4", "2")).
+                viewedBy(actor).asString();
     }
 
     public String textoEmail(Actor actor) {
-        return Text.of(POSITION_TABLE.of("2", "2")).viewedBy(actor).asString();
+        return Text.of(POSITION_TABLE.of("2", "2")).
+                viewedBy(actor).asString();
     }
 
     public String textoSubject(Actor actor) {
-        return Text.of(POSITION_TABLE.of("6", "2")).viewedBy(actor).asString();
+        return Text.of(POSITION_TABLE.of("6", "2")).
+                viewedBy(actor).asString();
     }
 
     public String textoCurrentAddres(Actor actor) {
-        return Text.of(POSITION_TABLE.of("9", "2")).viewedBy(actor).asString();
+        return Text.of(POSITION_TABLE.of("9", "2")).
+                viewedBy(actor).asString();
     }
 
     @Override

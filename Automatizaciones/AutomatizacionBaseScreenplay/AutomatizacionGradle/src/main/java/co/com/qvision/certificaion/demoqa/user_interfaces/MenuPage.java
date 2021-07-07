@@ -58,6 +58,8 @@ public class MenuPage {
     public static final Target LBL_LEFT_SUB_MENU_FORM = Target.the("label menu izquierdo").
             locatedBy("//span[contains(text(), 'Practice Form')]");
 
+
+
     public static final Target NOMBRE = Target.the("Campo nombre").
             locatedBy("//*[@id='firstName']");
 
@@ -103,7 +105,7 @@ public class MenuPage {
             locatedBy("//*[@id='dateOfBirthInput']");
 
     public static final Target VALIDACION_NAME = Target.the("Validacion name").
-            locatedBy("//*[@id='example-modal-sizes-title-lg']");
+            locatedBy("//*[@id='name']");
 
     public static final Target CAMPO_POR_ID = Target.the("campo {0}").
             locatedBy("//*[@id='{0}']");

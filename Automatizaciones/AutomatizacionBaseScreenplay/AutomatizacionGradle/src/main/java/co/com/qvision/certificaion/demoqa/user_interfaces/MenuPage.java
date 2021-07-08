@@ -38,8 +38,8 @@ public class MenuPage {
     // Elementos Radio Button
     public static final Target BTN_RADIO_BUTTON =Target.the("Botón Radio Button").
             locatedBy("//label[contains(@for, '{0}')]");
-
-
+//*[@id='{0}']
+//label[contains(@for, '{0}')]
     // Elementos Web Tables
 //label[contains(@for, 'yesRadio ')]
     // Elementos Buttons
@@ -114,4 +114,8 @@ public class MenuPage {
             locatedBy(" //table/tbody/tr[{0}]/td[{1}]");
 
     //MODULO ALERTS
+
+
+    public static final Target BTN_ALERTAS = Target.the("Botones submenu alerts").
+            locatedBy("//*[@id='{0}']");
 }

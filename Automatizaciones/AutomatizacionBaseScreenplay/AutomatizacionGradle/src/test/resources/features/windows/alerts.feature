@@ -1,11 +1,22 @@
 #language: es
 
 Característica: Como usuario deseo verificar la funcionalidad de los botones Haz clic en mi de acuerdo a su referencia
+
   @test
-  Escenario: Visualizacion de alerta
+  Esquema del escenario: Visualizacion de alerta
     Dado que el usuario quiera ver la alerta
+      | La Tarjeta   | Seleccionado   |
+      | <La Tarjeta> | <Seleccionado> |
     Cuando seleccione el boton Haz click en mi que corresponde a la alerta deseada
+      | Boton   |
+      | <Boton> |
     Entonces se mostrara una ventana con un mensaje de la accion ejecutada y para continuar debera dar click en el boton aceptar
+    Ejemplos:
+      | La Tarjeta              | Seleccionado | Boton            |
+      | Alerts, Frame & Windows | Alerts       | alertButton      |
+      | Alerts, Frame & Windows | Alerts       | timerAlertButton |
+      #| Alerts, Frame & Windows | Alerts       | confirmButton    |
+      #| Alerts, Frame & Windows | Alerts       | promtButton      |
 
   Escenario: Visualizacion de alerta despues de cinco segundos
     Dado que el usuario quiera ver la alerta despues de cinco segundos

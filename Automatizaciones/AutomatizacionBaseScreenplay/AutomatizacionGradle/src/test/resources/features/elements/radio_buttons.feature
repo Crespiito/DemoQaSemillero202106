@@ -13,9 +13,9 @@ Característica: Como usuario deseo verificar la funcionalidad del item Radio Bu
       | <Boton> |
     Entonces valido que este presente el item Radio Button
     Ejemplos:
-      | La Tarjeta | Seleccionado | Boton           |
+      | La Tarjeta | Seleccionado | Boton    |
+      | Elements   | Radio Button | yesRadio |
       | Elements   | Radio Button | impressiveRadio |
-      | Elements   | Radio Button | yesRadio        |
 
 
   Esquema del escenario: Quiera marcar que no le gusto el sitio

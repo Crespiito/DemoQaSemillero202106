@@ -1,24 +1,46 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions;
 
+import co.com.qvision.certificaion.demoqa.models.OpcionRadioButtonModel;
+import co.com.qvision.certificaion.demoqa.models.OpcionesMenuModel;
+import co.com.qvision.certificaion.demoqa.questions.ValidarAlertsQuestion;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.GivenWhenThen;
+import net.serenitybdd.screenplay.actors.OnStage;
+import org.hamcrest.Matchers;
+
+import static co.com.qvision.certificaion.demoqa.tasks.ClicksAlertsTask.clicksAlerts;
+import static co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionTask.seleccionarOpcion;
 
 public class AlertsStepDefinitions {
 
     @Dado("que el usuario quiera ver la alerta")
-    public void queElUsuarioQuieraVerLaAlerta() {
-
+    public void queElUsuarioQuieraVerLaAlerta(OpcionesMenuModel option) {
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                seleccionarOpcion(option.getOpcion(),option.getSubmenu())
+        );
     }
 
     @Cuando("seleccione el boton Haz click en mi que corresponde a la alerta deseada")
-    public void seleccioneElBotonHazClickEnMiQueCorrespondeALaAlertaDeseada() {
+    public void seleccioneElBotonHazClickEnMiQueCorrespondeALaAlertaDeseada(OpcionRadioButtonModel option) {
+        OnStage.theActorInTheSpotlight().attemptsTo(
+               clicksAlerts(option.getBoton())
+        );
+
 
     }
 
     @Entonces("se mostrara una ventana con un mensaje de la accion ejecutada y para continuar debera dar click en el boton aceptar")
     public void seMostraraUnaVentanaConUnMensajeDeLaAccionEjecutadaYParaContinuarDeberaDarClickEnElBotonAceptar() {
-
+       OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(
+                "La validación de mi prueba",
+                ValidarAlertsQuestion.validarAlertsQuestion(),
+                Matchers.anyOf(
+                        Matchers.is("You clicked a button"),
+                        Matchers.is("This alert appeared after 5 seconds")
+                )
+        ));
     }
 
     @Dado("que el usuario quiera ver la alerta despues de cinco segundos")

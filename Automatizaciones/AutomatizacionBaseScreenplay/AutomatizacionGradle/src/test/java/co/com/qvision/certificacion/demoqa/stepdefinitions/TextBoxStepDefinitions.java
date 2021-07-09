@@ -7,6 +7,7 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
+import org.hamcrest.Matchers;
 
 import static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
 
@@ -41,38 +42,8 @@ public class TextBoxStepDefinitions {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat("La validación de mi prueba",
                 ValidarFormularioQuestion.validarFormularioQuestion(),
                 sameBeanAs(option)
+                //Matchers.equalTo("")
+                //org.hamcrest.Matchers.equalTo("")
         ));
     }
-
-    @Cuando("Diligencio solo el campo Full Name")
-    public void diligencioSoloElCampoFullName() {
-
-    }
-
-    @Entonces("Se visualizara el resumen con el nombre")
-    public void seVisualizaraElResumenConElNombre() {
-
-    }
-
-    @Cuando("Diligencio solo el campo E mail")
-    public void diligencioSoloElCampoEMail() {
-
-    }
-
-    @Entonces("Se visualizara el resumen del E mail")
-    public void seVisualizaraElResumenDelEMail() {
-
-    }
-
-    @Cuando("Envio el formulario sin diligenciar")
-    public void envioElFormularioSinDiligenciar() {
-
-    }
-
-    @Entonces("No se visualizara ningun cambio")
-    public void noSeVisualizaraNingunCambio() {
-
-    }
-
-
 }

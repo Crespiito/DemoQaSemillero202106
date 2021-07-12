@@ -1,5 +1,8 @@
 package co.com.certificacion.qvision.stepdefinitions;
 
+import co.com.certificacion.qvision.models.FormData;
+import co.com.certificacion.qvision.models.OpcionesMenuModel;
+import co.com.certificacion.qvision.steps.DemoQaFormSteps;
 import co.com.certificacion.qvision.steps.DemoQaGeneralSteps;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
@@ -11,21 +14,22 @@ public class PracticeFormStepdefinitions {
     @Steps
     DemoQaGeneralSteps demoQaGeneralSteps;
 
+    @Steps
+    DemoQaFormSteps demoQaFormSteps;
+
     @Dado("que el usuario ingresa a la opcion de La Tarjeta y el submenu Seleccionado")
-    public void queElUsuarioIngresaALaOpcionDeLaTarjetaYElSubmenuSeleccionado() {
-        demoQaGeneralSteps.abrirPaginaDemoQa();
-        demoQaGeneralSteps.seleccionarTarjeta();
+    public void queElUsuarioIngresaALaOpcionDeLaTarjetaYElSubmenuSeleccionado(OpcionesMenuModel opciones) {
+        demoQaGeneralSteps.seleccionarOpcion(opciones);
     }
 
     @Cuando("lleno el formulario")
-    public void llenoElFormulario() {
-        System.out.println("stop");
-
+    public void llenoElFormulario(FormData data) {
+        demoQaFormSteps.enviarFormularioBase(data);
     }
 
     @Entonces("confirmo si se registra el formulario")
-    public void confirmoSiSeRegistraElFormulario() {
+    public void confirmoSiSeRegistraElFormulario(FormData data) {
 
-
+        demoQaFormSteps.validarEnvio(data);
     }
 }

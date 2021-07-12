@@ -37,7 +37,11 @@ public class PracticeFormStepDefinition {
         //Comparacion por modelo
         //FormData datos = new FormData("juan","bautista","hola@queteimporta.com", "Male", "1234567890","English","Sports","abc 123");
 
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat("la validacion de mi prueba", ValidarFormularioQuestion.validar(),sameBeanAs(datos)));
+        OnStage.theActorInTheSpotlight().
+                should(GivenWhenThen.
+                        seeThat("la validacion de mi prueba",
+                                ValidarFormularioQuestion.validar(),
+                                sameBeanAs(datos)));
 
 
                 //Comparacion directa usando Matchers

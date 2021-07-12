@@ -11,7 +11,9 @@ public class EnviarFormulario implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        BrowseTheWeb.as(actor).evaluateJavascript("arguments[0].scrollIntoView(arguments[1]);", CAMPO_POR_ID.of("submit").resolveFor(actor), true);
+        BrowseTheWeb.as(actor).evaluateJavascript(
+                "arguments[0].scrollIntoView(arguments[1]);",
+                CAMPO_POR_ID.of("submit").resolveFor(actor), true);
         CAMPO_POR_ID.of("submit").resolveFor(actor).click();
 
     }

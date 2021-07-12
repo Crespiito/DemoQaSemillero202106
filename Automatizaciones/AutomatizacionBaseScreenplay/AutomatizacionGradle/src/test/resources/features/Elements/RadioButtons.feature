@@ -8,7 +8,7 @@ Característica: Como usuario deseo verificar la funcionalidad del item Radio Bu
      # |La Tarjeta|Seleccionado|
      # |<La Tarjeta>| <Seleccionado>|
     Cuando seleccione el item Radio Button
-    Entonces se le mostrara el contenido de esa seccion
+   Entonces se le mostrara el contenido de esa seccion
     #Ejemplos:
       #|La Tarjeta|Seleccionado|
      # |Elements  |Radio Button|
@@ -23,6 +23,7 @@ Característica: Como usuario deseo verificar la funcionalidad del item Radio Bu
 
    #Entonces podra ver un mensaje con la opcion seleccionada de la siguiente manera Has seleccionado si
     #Entonces podra ver un mensaje con la opcion seleccionada de la siguiente manera <Mensaje>
+   # Entonces podra ver un mensaje con la opcion Yes seleccionada
     #Ejemplos:
      # |Opcion|Mensaje|
       #|Si  |Has seleccionado si|
@@ -36,6 +37,7 @@ Característica: Como usuario deseo verificar la funcionalidad del item Radio Bu
 
     #Entonces podra ver un mensaje con la opcion seleccionada de la siguiente manera "Has seleccionado Impresionante"
     #Entonces podra ver un mensaje con la opcion seleccionada de la siguiente manera <Mensaje>
+   # Entonces podra ver un mensaje con la opcion Impressive seleccionada
    #Ejemplos:
     # |Opcion|Mensaje|
      #|Impresionante|Has seleccionado Impresionante|

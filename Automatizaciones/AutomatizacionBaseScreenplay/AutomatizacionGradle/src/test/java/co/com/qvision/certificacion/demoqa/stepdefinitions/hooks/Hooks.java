@@ -1,5 +1,6 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.hooks;
 
+import co.com.qvision.certificaion.demoqa.models.Elements.Links.LinksData;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
 import net.serenitybdd.screenplay.actions.Open;
@@ -81,5 +82,14 @@ public class Hooks {
         );
     }
 
+    @DataTableType
+    public LinksData datosLinks(Map<String,String> datos) {
+        return new LinksData(
+                datos.get("link"),
+                datos.get("mensaje")
+
+
+        );
+    }
 
 }

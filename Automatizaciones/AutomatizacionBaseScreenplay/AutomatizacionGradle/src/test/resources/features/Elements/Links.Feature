@@ -9,7 +9,7 @@ Característica: Como usuario deseo probar los links de el elemento "Links"
     Cuando selecciono el link <link>
       #|link|
       #|<link>|
-    Entonces Me direcciona a la pagina inicial <pagina>
+  #  Entonces Me direcciona a la pagina inicial <pagina>
       #|pagina|
       #|<pagina>|
     Ejemplos:
@@ -21,7 +21,7 @@ Característica: Como usuario deseo probar los links de el elemento "Links"
 
     Dado que como usuario me encuentro en la pagina <Links>
     Cuando selecciono el link <HomeFQTwx>
-    Entonces  Me direcciona a la pagina inicial <demoqa.com>
+   # Entonces  Me direcciona a la pagina inicial <demoqa.com>
 
       #Items parte Titulo 2 links
 
@@ -33,12 +33,12 @@ Característica: Como usuario deseo probar los links de el elemento "Links"
     Cuando selecciono el link <link>
       |link|
       |<link>|
-    Entonces Me deberia mostrar un mensaje que diga <mensaje>"
-      |mensaje|
-      |<mensaje>|
+    Entonces Me deberia mostrar un mensaje de status
+      |link|mensaje|
+      |<link>|<mensaje>|
     Ejemplos:
       |Seleccionado|link|mensaje|
-      |Links|Created|Link has responded with staus 201 and status text Created|
+      |Links|Created|Link with staus 201 and status text Created|
       |Links|No Content|Link has responded with staus 204 and status text No Content|
       |Links|Moved|Link has responded with staus 301 and status text Moved Permanently|
       |Links|Bad Request|Link has responded with staus 400 and status text Bad Request|

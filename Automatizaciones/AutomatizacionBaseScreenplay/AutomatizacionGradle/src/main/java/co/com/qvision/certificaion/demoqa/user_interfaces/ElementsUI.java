@@ -165,7 +165,7 @@ public class ElementsUI {
 
 
 
-    public static final Target MENSAJE_YES_RADIOBUTTON =
+    public static final Target MENSAJE_RADIOBUTTON =
             Target.the("Mensaje al seleccionar Opcion Yes Radio Button").
                     locatedBy("//*[@id=\"app\"]/div/div/div[2]/div[2]/div[1]/p/span");
 
@@ -210,6 +210,12 @@ public class ElementsUI {
             Target.the("Boton Links").
                     locatedBy("//*[@id=\"item-5\"]");
 
+    //Mapeo para aplicacion de acceso por ID
+  public static final Target LINK_POR_ID =
+            Target.the("Link {}").
+                    locatedBy("//*[@id={}]");
+
+
     //Following links will open new tab
 
     public static final Target LINK_HOME =
@@ -250,9 +256,15 @@ public class ElementsUI {
             Target.the("Link Not Found").
                     locatedBy("//*[@id=\"invalid-url\"]");
 
+    public static final Target LINK_MENSAJE =
+            Target.the("Mensaje de respuesta a Link").
+                    locatedBy("//*[@id=\"linkResponse\"]");
 
 
-    //Boton Broken Links
+
+
+
+//Boton Broken Links
     public static final Target BOTON_BROKENLINKSIMAGES =
             Target.the("Boton Broken Links").
                     locatedBy("//*[@id=\"item-6\"]/span[contains(text(),\"Broken Links - Images\")]");

@@ -1,31 +1,25 @@
 #language: es
-# encoding: iso-8859-1
+
 
 Característica: Como usuario deseo verificar del módulo
-  "Elements" las funcionalidad "Text Box"
-  Escenario: Validar que en la lista Elements aparezca el item Text Box
-    Dado Yo como usuario ingrese al modulo "Elements"
-    Cuando Seleccione "Text Box"
-    Entonces Despliegue el formulario
+  Elements las funcionalidad Text Box
 
-  Escenario: Diligenciar todos los campos del formulario "Text Box"
-    Dado Yo como usuario este en el formulario desplegado de "Text Box"
-    Cuando Diligencio cada uno de los campos
-    Entonces Se visualizará el resumen de la información diligenciada
+  @Test2
+    Esquema del escenario: Escenario: yo como usuario del modulo elements en el item Text Box deseo verificar funcionalidad de los campos
+              de texto
 
-  Escenario: Diligenciar solo el campo "Full Name" del formulario
-    Dado Yo como usuario este en el formulario desplegado de "Text Box"
-    Cuando Diligencio solo el campo "Full Name"
-    Entonces Se visualizará el resumen con el nombre
-
-  Escenario: Diligenciar solo el campo "E mail" del formulario
-    Dado yo como usuario este en el formulario desplegado de "Text Box"
-    Cuando Diligencio solo el campo "E mail"
-    Entonces Se visualizará el resumen del E mail
-
-  Escenario: Enviar el formulario sin diligenciar
-    Dado yo como usuario este en el formulario desplegado de "Text Box"
-    Cuando Envío el formulario sin diligenciar
-    Entonces No se visualizará ningun cambio
+    Dado que como usuario en el item Text Box del modulo elements
+      | La Tarjeta   | Seleccionada   |
+      | <La Tarjeta> | <Seleccionada> |
+    Cuando ingreso datos en los campos de texto
+      | fullName   | email   | currentAdress   | permantenAdress   |
+      | <fullName> | <email> | <currentAdress> | <permantenAdress> |
+    Entonces verifico que se guarden los datos
+      | fullName   | email   | currentAdress   | permantenAdress   |
+      | <fullName> | <email> | <currentAdress> | <permantenAdress> |
+    Ejemplos:
+      | La Tarjeta | Seleccionada | fullName | email            | currentAdress | permantenAdress |
+      | Elements   | Text Box     | ana      | anap@gmail.com   | Santa Isabel  | Bogotá          |
+      | Elements   | Text Box     | miguel   | miguel@gmail.com | El virrey     | Usme            |
 
 

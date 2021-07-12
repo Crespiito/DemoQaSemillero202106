@@ -1,39 +1,22 @@
 #language: es
-# encoding: iso-8859-1
 
-Característica: Como usuario deseo verificar la funcionalidad de los botones "Haz clic en mi" de acuerdo a su referencia
-  Escenario: Visualización de alerta
-    Dado que el usuario quiera ver la alerta
-    Cuando seleccione el botón "Haz click en mi" que corresponde a la alerta deseada
-    Entonces se mostrará una ventana con un mensaje de la acción ejecutada y para continuar deberá dar click en el botón aceptar
+@Test3
+Característica: Como usuario deseo verificar la funcionalidad de los botones Haz clic en mi de acuerdo a su referencia
+Esquema del escenario: Verificacion de los mensajes en alerts
 
-  Escenario: Visualización de alerta después de 5 segundos
-    Dado que el usuario quiera ver la alerta después de 5 segundos
-    Cuando seleccione el botón "Haz click en mi" que corresponde a la alerta deseada
-    Entonces se mostrará una ventana después de 5s con un mensaje de la acción ejecutada y para continuar deberá dar click en el botón aceptar
+  Dado que el usuario del modulo Alert y windows en el item Alerts
+    | La Tarjeta   | Seleccionada   |
+    | <La Tarjeta> | <Seleccionada> |
+  Cuando selecciono el primer boton alert button
+    | boton   |
+    | <boton> |
+  Entonces  verifico el mensaje You clicked a button
+    | mensaje   |
+    | <mensaje> |
+  Ejemplos:
+    | La Tarjeta              | Seleccionada | boton            | mensaje                             |
 
-  Escenario: Confirmación de alerta al aceptar
-    Dado que el usuario quiera ver la confirmación al seleccionar el botón
-    Cuando seleccione el botón "Haz click en mi" que corresponde a la alerta deseada
-    Entonces se mostrará un cuadro donde debe seleccionar aceptar para confirmar la acción y que esta se vea al lado del enunciado del botón
+    | Alerts, Frame & Windows | Alerts       | timerAlertButton | This alert appeared after 5 seconds |
+    | Alerts, Frame & Windows | Alerts       | alertButton      | You clicked a button                |
+    | Alerts, Frame & Windows | Alerts       | confirmButton    | Do you confirm action?              |
 
-  Escenario: Confirmación de alerta al cancelar
-    Dado que el usuario quiera ver la confirmación al seleccionar el botón
-    Cuando seleccione el botón "Haz click en mi" que corresponde a la alerta deseada
-    Entonces se mostrará un cuadro donde debe seleccionar cancelar para ver esta elección al lado del enunciado del botón
-
-  Escenario: Confirmación de aviso al aceptar
-    Dado que el usuario quiera validar la aparición de un cuadro de aviso
-    Cuando seleccione el botón "Haz click en mi" que corresponde a la alerta deseada
-    Entonces se mostrará un aviso donde puede ingresar su nombre el cual se verá reflejado al lado del enunciado si selecciona el botón aceptar.
-
-  Escenario: Confirmación de aviso al cancelar
-    Dado que el usuario quiera validar la aparición de un cuadro de aviso
-    Cuando seleccione el botón "Haz click en mi" que corresponde a la alerta deseada
-    Entonces se mostrará un aviso donde puede ingresar su nombre el cual no se verá reflejado al lado del enunciado si selecciona el botón cancelar.
-
-  Escenario: Como usuario en el modulo Alerts, frame & windows deseo comprobar la funcionalidad
-  de los botones Small modal y Large modal
-    Dado que como usuario del modulo Alerts, frame & windows
-    Cuando selecciono cada boton
-    Entonces verifico los mensajes en los alerts

@@ -2,8 +2,8 @@ package co.com.qvision.certificaion.demoqa.models;
 
 public class MenuModel {
 
-    String modulo;
-    String item;
+    private String modulo;
+    private String item;
 
     public MenuModel(String modulo, String item) {
         this.modulo = modulo;

@@ -10,6 +10,8 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 
 import net.serenitybdd.screenplay.actors.OnStage;
+import org.hamcrest.Matchers;
+
 import  static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
@@ -29,6 +31,7 @@ public class PracticeFormStepDefinition {
 
     @Entonces("confirmo si se envio el formulario")
     public void confirmoSiSeEnvioElFormulario(DataForm dataForm) {
-        OnStage.theActorInTheSpotlight().should(seeThat("valida obj", PracticeFormTableQuestion.practiceFormQuestion2(),sameBeanAs(dataForm)));
+       OnStage.theActorInTheSpotlight().should(seeThat("valida obj", PracticeFormTableQuestion.practiceFormQuestion2(),sameBeanAs(dataForm)));
+
     }
 }

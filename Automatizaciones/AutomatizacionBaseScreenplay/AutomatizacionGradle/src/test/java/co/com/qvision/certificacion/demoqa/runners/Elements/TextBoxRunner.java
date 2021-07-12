@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/Elements/TextBox.feature",
-        glue = "co.com.qvision.certificacion.demoqa.stepdefinitions",
-        snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = " @Test1"
+        glue = "co.com.qvision.certificacion.demoqa.stepdefinitions.hooks",
+        snippets = CucumberOptions.SnippetType.CAMELCASE
+     //   tags = " @Test1"
 )
 
 public class TextBoxRunner {

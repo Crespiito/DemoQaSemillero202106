@@ -1,44 +1,63 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.AlertsFrameWindows;
 
+import co.com.qvision.certificaion.demoqa.tasks.AlertsFrameWindows.Alerts.SelectAlertTask;
+import co.com.qvision.certificaion.demoqa.tasks.AlertsFrameWindows.Alerts.SelectOptionTarjetaAlertsTask;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.actors.OnStage;
 
 public class AlertsStepDefinition {
 
+    //Alerta simple - Click Button to see alert
     @Dado("que el usuario quiera ver la alerta")
     public void queElUsuarioQuieraVerLaAlerta() {
-        System.out.println("entro al dado ");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                SelectOptionTarjetaAlertsTask.selectOptionTarjetaAlertsTask()
+
+        );
+
+        //System.out.println("entro al dado ");
 
     }
 
     @Cuando("seleccione el boton {string} que corresponde a la alerta deseada")
     public void seleccioneElbotonQueCorrespondeALaAlertaDeseada(String string) {
-        System.out.println("entro al cuando");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                SelectAlertTask.selectAlertTask()
+
+        );
+        //System.out.println("entro al cuando");
     }
 
-    @Entonces("se mostrara una ventana con un mensaje de la accion ejecutada y para continuar debera dar click en el boton aceptar")
-    public void semostraraUnaVentanaConUnMensajeDeLaaccionEjecutadaYParaContinuardeberaDarClickEnElbotonAceptar() {
+    @Entonces("se mostrara una ventana con el mensaje {} y para continuar debera dar click en el boton {}")
+    public void seMostraraUnaVentanaConElMensajeyParaContinuarDeberaDarClickEnElBoton() {
         System.out.println("entro al entonces");
     }
 
-    @Dado("que el usuario quiera ver la alerta despues de {int} segundos")
-    public void queElUsuarioQuieraVerLaAlertadespuesDeSegundos(Integer int1) {
+
+    // #On button click, alert will appear after 5 seconds
+
+    @Dado("que el usuario quiera ver la alerta despues de cinco segundos")
+    public void queElUsuarioQuieraVerLaAlertadespuesDeCincoSegundos() {
         System.out.println("entro al dado ");
     }
 
-    @Entonces("se mostrara una ventana despues de 5s con un mensaje de la accion ejecutada y para continuar debera dar click en el boton aceptar")
-    public void semostraraUnaVentanadespuesDe5sConUnMensajeDeLaaccionEjecutadaYParaContinuardeberaDarClickEnElbotonAceptar() {
+    @Entonces("se mostrara una ventana despues de cinco seg con el mensaje {} y para continuar debera dar click en el boton {}")
+    public void seMostraraUnaVentanaDespuesDeCincoSegConElMensajeYParaContinuarDeberaDarClickEnElboton() {
         System.out.println("entro al entonces");
     }
 
-    @Dado("que el usuario quiera ver la confirmacion al seleccionar el boton")
+
+   // #On button click, confirm box will appear - select Accept
+
+    @Dado("que el usuario quiera ver la Confirmacion al seleccionar el boton")
     public void queElUsuarioQuieraVerLaconfirmacionAlSeleccionarElboton() {
         System.out.println("entro al dado ");
     }
 
-    @Entonces("se mostrara un cuadro donde debe seleccionar aceptar para confirmar la accion y que esta se vea al lado del enunciado del boton")
-    public void semostraraUnCuadroDondeDebeSeleccionarAceptarParaConfirmarLaaccionYQueEstaSeVeaAlLadoDelEnunciadoDelboton() {
+    @Entonces("se mostrara un cuadro donde debe seleccionar {} para confirmar la accion y que esta se vea al lado del enunciado del boton")
+    public void seMostraraUnCuadroDondeDebeSeleccionarParaConfirmarLaAccionYQueEstaSeVeaAlLadoDelEnunciadoDelboton() {
         System.out.println("entro al entonces");
     }
 

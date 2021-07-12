@@ -1,100 +1,118 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.Elements;
 
+import co.com.qvision.certificaion.demoqa.tasks.Elements.CheckBox.SelectCheckBoxCBTask;
+import co.com.qvision.certificaion.demoqa.tasks.Elements.CheckBox.SelectOptionCheckBoxTask;
+import co.com.qvision.certificaion.demoqa.tasks.Elements.CheckBox.SelectToggleCBTask;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.actors.OnStage;
 
 public class CheckBoxStepDefinition {
 
-    @Dado("Yo como usuario ingrese al modulo {string}")
+//Escenario de ingreso a submodulo Check Box
+    @Dado("Yo como usuario ingrese al modulo {}")
     public void yoComoUsuarioIngreseAlModulo(String string) {
-        System.out.println("entro al dado ");
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectOptionCheckBoxTask.seleccionarOpcion());
+       // System.out.println("entro al dado ");
     }
 
-
-    @Cuando("Seleccione {string}")
+    @Cuando("Seleccione {}")
     public void seleccione(String string) {
-        System.out.println("entro al cuando");
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectCheckBoxCBTask.selectCheckBoxCBTask());
+        //OnStage.theActorInTheSpotlight().attemptsTo(SelectToggleCBTask.selectToggleCBTask());
+        //System.out.println("entro al cuando");
     }
 
-    @Entonces("Visualice Home")
-    public void visualiceHome() {
+    @Entonces("Visualice {}")
+    public void visualice(String string) {
         System.out.println("entro al entonces");
     }
 
 
+//Probar seleccionar-desplegar (Toggle) en check Box
 
-    @Dado("Yo como usuario este en la funcionalidad {string}")
+    @Dado("Yo como usuario este en la funcionalidad {}")
     public void yoComoUsuarioEsteEnLaFuncionalidad(String string) {
-        System.out.println("entro al dado ");
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectOptionCheckBoxTask.seleccionarOpcion());
+        //System.out.println("entro al dado ");
     }
 
-    @Cuando("Seleccione Toggle Home")
-    public void seleccioneToggleHome() {
-        System.out.println("entro al cuando");
+    @Cuando("Seleccione el Toggle o listar de {}")
+    public void seleccioneElToggleOListarDe(String string) {
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectToggleCBTask.selectToggleCBTask());
+       // System.out.println("entro al cuando");
     }
 
-    @Entonces("Se desplegara las carpetas que contiene Home")
-    public void seDesplegaraLasCarpetasQueContieneHome() {
+    @Entonces("Se desplegara las carpetas que contiene {}")
+    public void seDesplegaraLasCarpetasQueContiene(String string){
         System.out.println("entro al entonces");
     }
 
-    @Cuando("Seleccione el check box de Home")
-    public void seleccioneElCheckBoxDeHome() {
-        System.out.println("entro al cuando");
+
+
+//Validar que funciones el check box
+
+    @Cuando("Seleccione el check box o desplegar de{}")
+    public void seleccioneElCheckBoxODesplegar(String string) {
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectCheckBoxCBTask.selectCheckBoxCBTask());
+      //  System.out.println("entro al cuando");
     }
 
-    @Entonces("Visualice el siguiente mensaje {string}")
+    @Entonces("Visualice el siguiente mensaje {}")
     public void visualiceElSiguienteMensaje(String string) {
         System.out.println("entro al entonces");
     }
 
-    @Dado("Yo como usuario tenga seleccionado el check box de Home")
-    public void yoComoUsuarioTengaSeleccionadoElCheckBoxDeHome() {
+
+//validar checkbox anidado
+
+    @Dado("Yo como usuario tenga seleccionado el check box de {}")
+    public void yoComoUsuarioTengaSeleccionadoElCheckBoxDe(String string) {
+        System.out.println("entro al dado ");
+    }
+    //Y
+    @Dado("desplegado el Toggle {}")
+    public void desplegadoElToggle(String string){
         System.out.println("entro al dado ");
     }
 
-    @Dado("desplegado el Toggle Home")
-    public void desplegadoElToggleHome() {
-        System.out.println("entro al dado ");
+    @Cuando("Deselecciono {}")
+    public void deselecciono(String string) {
+        System.out.println("entro al cuando");
     }
-
-    @Cuando("Deselecciono Documents")
-    public void deseleccionoDocuments() {
+    //Y
+    @Cuando("Selecciono el Toggle de {}")
+    public void seleccionoElToggleDe(String string){
         System.out.println("entro al cuando");
     }
 
-    @Cuando("Selecciono el Toggle de Documents")
-    public void seleccionoElToggleDeDocuments() {
-        System.out.println("entro al cuando");
-    }
-
-    @Entonces("Documents y las carpetas en su interior se deseleccionan")
-    public void documentsYLasCarpetasEnSuInteriorSeDeseleccionan() {
+    @Entonces("{} y las carpetas en su interior se deseleccionan")
+    public void YLasCarpetasEnSuInteriorSeDeseleccionan(String string) {
         System.out.println("entro al entonces");
     }
 
-    @Cuando("selecciono el evento {string}")
-    public void seleccionoElEvento(String string) {
-        System.out.println("entro al cuando");
-    }
 
-    @Entonces("Visualizare toda las carpetas que se encuentran al interior de {string}")
-    public void visualizareTodaLasCarpetasQueSeEncuentranAlInteriorDe(String string) {
-        System.out.println("entro al entonces");
-    }
 
-    @Dado("se haya seleccionado el evento {string}")
-    public void seHayaSeleccionadoElEvento(String string) {
-        System.out.println("entro al dado ");
-    }
+  //#Expandir y contraer todas las carpetas
+     @Dado("se haya seleccionado el evento {}")
+     public void seHayaSeleccionadoElEvento(String string) {
+      System.out.println("entro al dado ");
+  }
 
-    @Cuando("Seleccione el evento {string}")
+
+    @Cuando("Seleccione el evento {}")
     public void seleccioneElEvento(String string) {
         System.out.println("entro al cuando");
     }
 
-    @Entonces("Visualizare que todas las carpetas desaparecen excepto {string}")
+    @Entonces("Visualizare toda las carpetas que se encuentran al interior de {}")
+    public void visualizareTodaLasCarpetasQueSeEncuentranAlInteriorDe(String string) {
+        System.out.println("entro al entonces");
+    }
+
+
+    @Entonces("Visualizare que todas las carpetas desaparecen excepto {}")
     public void visualizareQueTodasLasCarpetasDesaparecenExcepto(String string) {
         System.out.println("entro al entonces");
     }

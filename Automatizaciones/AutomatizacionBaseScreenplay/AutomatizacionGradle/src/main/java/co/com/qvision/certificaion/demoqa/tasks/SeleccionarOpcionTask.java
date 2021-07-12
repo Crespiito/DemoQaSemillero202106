@@ -2,13 +2,10 @@ package co.com.qvision.certificaion.demoqa.tasks;
 
 
 
-import co.com.qvision.certificaion.demoqa.interactions.SeleccionarOpcionesInicialesInteraction;
-import co.com.qvision.certificaion.demoqa.interactions.TarjetaPrincipalInteraction;
+import co.com.qvision.certificaion.demoqa.interactions.Forms.SeleccionarOpcionesInicialesInteraction;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-
-import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SeleccionarOpcionTask implements Task {
 

@@ -1,10 +1,8 @@
 package co.com.qvision.certificacion.demoqa.stepdefinitions.Forms;
 
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-
-import co.com.qvision.certificaion.demoqa.models.FormData;
-import co.com.qvision.certificaion.demoqa.questions.ValidarFormularioQuestion;
-import co.com.qvision.certificaion.demoqa.tasks.LlenarFormulario;
+import co.com.qvision.certificaion.demoqa.models.Forms.FormData;
+import co.com.qvision.certificaion.demoqa.questions.Forms.ValidarFormularioQuestion;
+import co.com.qvision.certificaion.demoqa.tasks.Forms.LlenarFormulario;
 import co.com.qvision.certificaion.demoqa.tasks.SeleccionarOpcionTask;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
@@ -12,8 +10,6 @@ import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
-import static org.hamcrest.Matchers.equalTo;
-
 
 
 public class PracticeFormStepDefinition {
@@ -30,7 +26,7 @@ public class PracticeFormStepDefinition {
 
     @Cuando("lleno el formulario")
     public void llenoElFormulario(FormData datos) {
-        OnStage.theActorInTheSpotlight().attemptsTo(LlenarFormulario.llenarFormulario(datos));
+            OnStage.theActorInTheSpotlight().attemptsTo(LlenarFormulario.llenarFormulario(datos));
 
     }
 

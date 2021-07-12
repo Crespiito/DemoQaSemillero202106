@@ -38,7 +38,7 @@ public class ElementsUI {
             Target.the("Boton Check Box").
                     locatedBy("//*[@id=\"item-1\"]/span[contains(text(),\"Check Box\")]");
 
-// Desplegar carpetas
+// Desplegar carpetas en check box (toggle)
     public static final Target DESPLEGAR_HOME =
             Target.the("Flecha para despegar carpeta Home").
                     locatedBy("//*[@id=\"tree-node\"]/ol/li/span/button");
@@ -63,7 +63,7 @@ public class ElementsUI {
             Target.the("Flecha para despegar carpeta Downloads").
                     locatedBy("//*[@id=\"tree-node\"]/ol/li/ol/li[3]/span/button/svg");
 
-   //Seleccionar carpetas
+   //Seleccionar carpetas en check box (check)
 
    public static final Target SELECCIONAR_HOME =
            Target.the("Campo para seleccionar carpeta Home").
@@ -80,6 +80,8 @@ public class ElementsUI {
     public static final Target SELECCIONAR_WORKSPACE=
             Target.the("Campo para seleccionar carpeta WorkSpace").
                     locatedBy("//*[@id=\"tree-node\"]/ol/li/ol/li[2]/ol/li[1]/span/label/span[1]/svg");
+
+
 
     public static final Target SELECCIONAR_REACT =
             Target.the("Campo para seleccionar carpeta React").
@@ -146,15 +148,33 @@ public class ElementsUI {
 
     public static final Target OPCION_YES_RADIOBUTTON =
             Target.the("Opcion Yes Radio Button").
-                    locatedBy("//*[@id=\"yesRadio\"]");
+                    locatedBy("//label[contains(@for, 'yesRadio') and @class='custom-control-label']");
+                   // locatedBy("//input[(@type='radio')and @id='yesRadio']");
+                   // locatedBy("//*[@id=\"yesRadio\"]");
 
     public static final Target OPCION_NO_RADIOBUTTON =
             Target.the("Opcion No Radio Button").
-                    locatedBy("//*[@id=\"noRadio\"]");
+                   locatedBy("//*[@id=\"app\"]/div/div/div[2]/div[2]/div[1]/div[4]/label");
+                   // locatedBy("//input[(@type='radio')and @id='noRadio']");
+    //locatedBy("//*[@id="app"]/div/div/div[2]/div[2]/div[1]/div[4]/label");
 
     public static final Target OPCION_IMPRESSIVE_RADIOBUTTON =
             Target.the("Opcion Impressive Radio Button").
-                    locatedBy("//*[@id=\"impressiveRadio\"]");
+                    locatedBy("//label[contains(@for, 'impressiveRadio') and @class='custom-control-label']");
+                   // locatedBy("//*[@id=\"impressiveRadio\"]");
+
+
+
+    public static final Target MENSAJE_YES_RADIOBUTTON =
+            Target.the("Mensaje al seleccionar Opcion Yes Radio Button").
+                    locatedBy("//*[@id=\"app\"]/div/div/div[2]/div[2]/div[1]/p/span");
+
+
+
+    public static final Target MENSAJE_IMPRESSIVE_RADIOBUTTON =
+            Target.the("Mensaje al seleccionar Opcion Impressive Radio Button").
+                    locatedBy("//*[@id=\"app\"]/div/div/div[2]/div[2]/div[1]/p/span");
+
 
 
 
@@ -188,11 +208,51 @@ public class ElementsUI {
 //Boton Links
     public static final Target BOTON_LINKS =
             Target.the("Boton Links").
-                    locatedBy("//*[@id=\"item-5\"]/span[contains(text(),\"Links\")]");
+                    locatedBy("//*[@id=\"item-5\"]");
+
+    //Following links will open new tab
+
+    public static final Target LINK_HOME =
+            Target.the("Link Home").
+                    locatedBy("//*[@id=\"simpleLink\"]");
+
+    public static final Target LINK_HOME_DINAMIC =
+            Target.the("Link Homeo41mH").
+                    locatedBy("//*[@id=\"dynamicLink\"]");
+
+    //Following links will send an api call
+
+    public static final Target LINK_CREATED =
+            Target.the("Link Created").
+                    locatedBy("//*[@id=\"created\"]");
+
+    public static final Target LINK_NOCONTENT =
+            Target.the("Link No Content").
+                    locatedBy("//*[@id=\"no-content\"]");
+
+    public static final Target LINK_MOVED =
+            Target.the("Link Moved").
+                    locatedBy("//*[@id=\"moved\"]");
+
+    public static final Target LINK_BADREQUEST =
+            Target.the("Link Bad request").
+                    locatedBy("//*[@id=\"bad-request\"]");
+
+    public static final Target LINK_UNAUTHORIZED =
+            Target.the("Link Unauthorized").
+                    locatedBy("//*[@id=\"unauthorized\"]");
+
+    public static final Target LINK_FORBIDDEN =
+            Target.the("Link Forbidden").
+                    locatedBy("//*[@id=\"forbidden\"]");
+
+    public static final Target LINK_NOTFOUND =
+            Target.the("Link Not Found").
+                    locatedBy("//*[@id=\"invalid-url\"]");
 
 
 
-//Boton Broken Links
+    //Boton Broken Links
     public static final Target BOTON_BROKENLINKSIMAGES =
             Target.the("Boton Broken Links").
                     locatedBy("//*[@id=\"item-6\"]/span[contains(text(),\"Broken Links - Images\")]");

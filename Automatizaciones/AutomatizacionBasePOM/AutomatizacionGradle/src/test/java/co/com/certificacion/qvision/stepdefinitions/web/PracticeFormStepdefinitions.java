@@ -1,4 +1,4 @@
-package co.com.certificacion.qvision.stepdefinitions;
+package co.com.certificacion.qvision.stepdefinitions.web;
 
 import co.com.certificacion.qvision.models.FormData;
 import co.com.certificacion.qvision.models.OpcionesMenuModel;
@@ -29,7 +29,7 @@ public class PracticeFormStepdefinitions {
 
     @Entonces("confirmo si se registra el formulario")
     public void confirmoSiSeRegistraElFormulario(FormData data) {
-
         demoQaFormSteps.validarEnvio(data);
     }
+
 }

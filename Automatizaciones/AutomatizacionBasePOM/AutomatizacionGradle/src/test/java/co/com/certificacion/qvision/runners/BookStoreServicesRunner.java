@@ -5,8 +5,9 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features/forms/practice_form.feature",
-glue ={"co.com.certificacion.qvision.stepdefinitions.services","co.com.certificacion.qvision.stepdefinitions.hooks"},
+@CucumberOptions(features = "src/test/resources/features/servicios/book_store_services.feature",
+glue = "co.com.certificacion.qvision.stepdefinitions.services",
 snippets = CucumberOptions.SnippetType.CAMELCASE)
-public class PracticeFormRunner {
+
+public class BookStoreServicesRunner {
 }

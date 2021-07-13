@@ -21,6 +21,7 @@ public class DemoQaGeneralUI extends PageObject {
     public WebElement getCapoID(String dato) {
         return getDriver().findElement(By.xpath("//*[@id='"+dato+"']"));
     }
+
     public List<WebElement> getTarjetas() {
         return getDriver().findElements(By.xpath("//h5"));
     }

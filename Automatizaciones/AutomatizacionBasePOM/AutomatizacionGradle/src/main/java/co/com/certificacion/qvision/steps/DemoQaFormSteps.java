@@ -17,6 +17,7 @@ public class DemoQaFormSteps {
     public void enviarFormularioBase(FormData datos){
         demoQaFormInteraction.enviarFormularioBase(datos);
     }
+
     @Step
     public void validarEnvio(FormData datos){
         assertThat("los datos no coinciden ", demoQaFormInteraction.obtenerDatosTabla(),sameBeanAs(datos).ignoring("genero"));

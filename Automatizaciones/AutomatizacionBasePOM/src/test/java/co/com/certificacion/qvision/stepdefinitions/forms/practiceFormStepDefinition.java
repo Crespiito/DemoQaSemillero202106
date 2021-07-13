@@ -19,16 +19,13 @@ public class practiceFormStepDefinition {
 
     @Cuando("lleno el formulario")
     public void llenoElFormulario() {
-        // Write code here that turns the phrase above into concrete actions
-        //throw new io.cucumber.java.PendingException();
+
         System.out.println("entro al Cuando");
     }
 
     @Entonces("confirmo si se registra el formulario")
     public void confirmoSiSeRegistraElFormulario() {
-        // Write code here that turns the phrase above into concrete actions
-        //throw new io.cucumber.java.PendingException();
-       // System.out.println("entro al Entonces");
-        demoQaGeneralSteps.validarTituloTarjeta();
+
+        //demoQaGeneralSteps.validarTituloTarjeta();
     }
 }

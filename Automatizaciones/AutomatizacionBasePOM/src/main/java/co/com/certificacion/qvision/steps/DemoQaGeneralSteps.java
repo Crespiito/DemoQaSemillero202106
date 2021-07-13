@@ -24,20 +24,22 @@ public class DemoQaGeneralSteps  {
         demoQaGeneralInteraction.selectTarjetaForms();
     }
 
-    @Step("Descripcion 2")
+   /* @Step("Descripcion 2")
     public void validarTituloTarjeta(){
-
-        //comparacion directa
+        MatcherAssert.assertThat("los textos no coinciden ", demoQaGeneralInteraction.ObtenerTituloSeleccionado(),sameBeanAs());
+      /*  //comparacion directa
         MatcherAssert.assertThat(
                 "El titulo no coincide con el seleccionado",
                 demoQaGeneralInteraction.
                         ObtenerTituloSeleccionado().contains("Forms"));
+                        }
+    */
 
 
-       /*
-     Titulo titulo = new Titulo("Forms");
-      assertThat("Los textos no coinciden ",demoQaGeneralInteraction.ObtenerTituloSeleccionado(),sameBeanAs(titulo));
-*/
+
+    //Titulo titulo = new Titulo("Forms");
+     // assertThat("Los textos no coinciden ",demoQaGeneralInteraction.ObtenerTituloSeleccionado(),sameBeanAs(titulo));
+
     }
 
-}
+

@@ -15,7 +15,7 @@ public class DemoQaGeneralSteps {
 
     //se agregan todos los mapeos pero sin usar target
 
-    String texto = "Texto en Variable";
+    //String texto = "Texto en Variable";
 
     @Page
     DemoQaGeneralInteraction demoQaGeneralInteraction;
@@ -28,13 +28,7 @@ public class DemoQaGeneralSteps {
         demoQaGeneralInteraction.open();
     }
 
-    /*
-    @Step("Descripcion 1")
-    public void selectTarjetaForms() {
-        demoQaGeneralInteraction.seleccionarTarjetaForms();
-    }
-    */
-
+/*
     @Step("Descripcion #texto 2")
     public void validarTituloTarjeta() {
       //  demoQaGeneralInteraction.seleccionarTarjetaForms();
@@ -51,7 +45,7 @@ public class DemoQaGeneralSteps {
         //Titulo titulo = new Titulo("Forms");
         // assertThat("Los textos no coinciden ",demoQaGeneralInteraction.ObtenerTituloSeleccionado(),sameBeanAs(titulo));
 
-    }
+
 
     public void seleccionarOpcion(OpcionesMenuModel opciones) {
         demoQaGeneralInteraction.seleccionarTarjetaForms(opciones.getOpcion());

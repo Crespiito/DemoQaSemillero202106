@@ -6,6 +6,8 @@ import net.thucydides.core.webdriver.javascript.JavascriptExecutorFacade;
 
 public class DemoQaFormInteraction extends DemoQaFormUI {
 
+
+
     public String setGenero(String genero){
         switch(genero){
             case ("Male"):

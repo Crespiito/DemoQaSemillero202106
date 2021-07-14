@@ -11,7 +11,8 @@ public class BookStoreStepDefinitions {
     @Steps
     BookStoreServiceSteps bookStoreServiceSteps;
 
-    //Se hace la preparacion
+
+    //Se hace la preparacion, se genera la preparacion del servicio (URL)
     @Dado("que quiero consumir el servicio del registro")
     public void queQuieroConsumirElServicioDelRegistro() {
         bookStoreServiceSteps.prepararServicioDemoQA();
@@ -19,16 +20,18 @@ public class BookStoreStepDefinitions {
     }
 
 
-    //Se hace el consumo
+
+    //Se hace la ejecucion (Body)
     @Cuando("consumo el servicio")
     public void consumoElServicio() {
         bookStoreServiceSteps.consumirServicioUser();
     }
 
 
+
     //Se hace las validaciones
     @Entonces("valido que en la respuesta el usuario exista")
     public void validoQueEnLaRespuestaElUsuarioExista() {
-
+        bookStoreServiceSteps.validarRespuestaUser();
     }
 }

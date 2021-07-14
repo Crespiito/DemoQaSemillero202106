@@ -12,6 +12,20 @@ import java.util.List;
 @DefaultUrl("https://demoqa.com/")
 public class DemoQaGeneralInteraction extends DemoQaGeneralUI {
 
+
+    public void seleccionarTarjetaForms(String opcion){
+        //mapeo multiples elementos
+        List<WebElement> lista = getTarjetas();
+        JavascriptExecutorFacade js = new JavascriptExecutorFacade(getDriver());
+        js.executeScript("arguments[0].scrollIntoView(arguments[1]);", getTarjetaForms(opcion), true);
+        getTarjetaForms(opcion).click();
+
+    }
+
+
+    public FormData ObtenerTituloSeleccionado(){
+        return new FormData();
+    }
     /*
     public void selectTarjetaForms(){
            //Scroll
@@ -20,10 +34,11 @@ public class DemoQaGeneralInteraction extends DemoQaGeneralUI {
 
         tarjetaForms.click();
     }
+
 */
-    public void selectTarjetaForms(){
-        //mapeo multiples elementos
-      //  List<WebElement> lista = getTarjetaForms();
+   // public void selectTarjetaForms(){
+        //mapeo multiples elementos - obteniendo tarjetas por listas
+      /*/  List<WebElement> lista = getTarjetaForms();
         List<WebElement> lista = getTarjetas();
         JavascriptExecutorFacade js = new JavascriptExecutorFacade((getDriver()));
         js.executeScript("arguments[0].scrollIntoView(arguments[1]);",getTarjetaForms("Forms"), true);
@@ -33,8 +48,8 @@ public class DemoQaGeneralInteraction extends DemoQaGeneralUI {
         JavascriptExecutorFacade js = new JavascriptExecutorFacade((getDriver()));
         js.executeScript("arguments[0].scrollIntoView(arguments[1]);",tarjetaElements, true);
         tarjetaElements.click();
+}
 */
-    }
 
     //
     /*

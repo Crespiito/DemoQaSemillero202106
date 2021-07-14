@@ -9,11 +9,11 @@ import java.util.List;
 
 public class DemoQaGeneralUI extends PageObject {
 
-    public WebElementFacade titulo;
-
+/*
+//Mapeo tarjeta Forms para ubicacion por lista
     @FindBy(xpath = "//h5[contains(text(),'Forms')]")
     public WebElementFacade tarjetaForms;
-
+*/
 
 //Header
     @FindBy(xpath =  "//*[@id=\"app\"]/div/div/div[1]/div")
@@ -29,7 +29,9 @@ public class DemoQaGeneralUI extends PageObject {
         return getDriver().findElements(By.xpath("//h5"));
     }
 
-
+    public WebElement getCapoID(String dato) {
+        return getDriver().findElement(By.xpath("//*[@id='"+dato+"']"));
+    }
 
 
 

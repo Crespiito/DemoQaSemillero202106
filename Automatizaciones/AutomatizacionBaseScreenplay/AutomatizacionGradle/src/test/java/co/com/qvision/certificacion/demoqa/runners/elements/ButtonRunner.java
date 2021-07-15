@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/elements/button.feature",
-        glue = "co.com.qvision.certificacion.demoqa.stepdefinitions",
+        glue = {"co.com.qvision.certificacion.demoqa.stepdefinitions.Elements","co.com.qvision.certificacion.demoqa.stepdefinitions.hooks"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = ""
+        tags = "@Test5"
 )
 
 public class ButtonRunner {

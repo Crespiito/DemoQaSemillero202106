@@ -24,6 +24,7 @@ public class SeleccionarOpcionesInicialesInteraction implements Interaction {
 
                    Scroll.to(BTN_FORM.of(opciones.getOpcion())),
                    Click.on(BTN_FORM.of(opciones.getOpcion())),
+                   Scroll.to(BTN_ITEMLATERAL.of(opciones.getSubmenu())),
                    Click.on(BTN_ITEMLATERAL.of(opciones.getSubmenu()))
            );
 

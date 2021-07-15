@@ -2,7 +2,26 @@
 
 
 Característica: Como usuario deseo verificar la funcionalidad del ítem Radio Button del modulo Elements
-  Escenario: Validar que en la lista de Elements aparezca  el item Radio Button
+
+  @Test4
+  Esquema del escenario: Validar que en la lista de Elements aparezca  el item Radio Button
+
     Dado que el usuario accede al modulo Elements en el item Radio Button
-    Cuando selecciona el radio button Impressive
-    Entonces el sistema muestra mensaje You have selected
+      | La Tarjeta   | Seleccionado   |
+      | <La Tarjeta> | <Seleccionado> |
+
+    Cuando selecciona el radio button Yes
+
+    |button|
+    |<button>|
+
+    Entonces el sistema muestra mensaje You have selected Yes
+
+    |message |
+    |<message>|
+
+    Ejemplos:
+      | La Tarjeta | Seleccionado |button|message|
+      | Elements   | Radio Button |Yes  | Yes|
+     # |Elements    |Radio Button  |Impressive |Impressive|
+

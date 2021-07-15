@@ -2,11 +2,11 @@ package co.com.qvision.certificaion.demoqa.models;
 
 public class FormData {
 
-    String nombre;
-    String apellido;
-    String correo;
-    String telefono;
-    String genero;
+    private String nombre;
+    private String apellido;
+    private String correo;
+    private String telefono;
+    private String genero;
 
 
     public FormData(String nombre, String apellido,String correo, String telefono, String genero) {

@@ -11,12 +11,6 @@ public class MenuPage {
 
     public static final Target BTN_ITEMLATERAL = Target.the("Seleccionar item menu").locatedBy("//span[contains(text(),'{0}')]");
 
-
-
-
-
-
-
 }
 
 

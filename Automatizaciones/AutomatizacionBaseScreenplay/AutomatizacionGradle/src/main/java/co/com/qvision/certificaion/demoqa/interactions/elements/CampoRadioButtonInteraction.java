@@ -1,5 +1,6 @@
 package co.com.qvision.certificaion.demoqa.interactions.elements;
 
+import co.com.qvision.certificaion.demoqa.models.RadioButtonModel;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
@@ -15,16 +16,13 @@ public class CampoRadioButtonInteraction implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
 
-               Click.on(RADIO_YES),
-                Click.on(RADIO_IMPRESSIVE),
-                Click.on(NO)
-
-
-
+                Click.on(RADIO_YES),
+                Click.on(RADIO_IMPRESSIVE)
+               // Click.on(NO)
         );
     }
 
-    public static CampoRadioButtonInteraction campoRadioButtonInteraction(){
-        return Tasks.instrumented(CampoRadioButtonInteraction.class);
+    public static CampoRadioButtonInteraction campoRadioButtonInteraction(RadioButtonModel datosRB){
+        return Tasks.instrumented(CampoRadioButtonInteraction.class, datosRB);
     }
 }

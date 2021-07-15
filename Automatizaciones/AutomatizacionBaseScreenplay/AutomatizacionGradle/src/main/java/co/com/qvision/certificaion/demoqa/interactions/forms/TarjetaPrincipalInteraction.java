@@ -23,6 +23,7 @@ public class TarjetaPrincipalInteraction implements Interaction {
             Scroll.to(TARJETA_FORM.of(opcion)),
             Click.on(BTN_FORM.of(opcion))
 
+
     );
     }
 

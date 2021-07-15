@@ -2,8 +2,8 @@ package co.com.qvision.certificaion.demoqa.models;
 
 public class OpcionMenuModel {
 
-    String opciones;
-    String submenu;
+    private String opciones;
+    private String submenu;
 
     public OpcionMenuModel(String opcion, String submenu) {
         this.opciones = opcion;

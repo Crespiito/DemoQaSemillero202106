@@ -22,6 +22,8 @@ public class Hooks {
         OnStage.theActorInTheSpotlight().attemptsTo(Open.url("https://www.demoqa.com/"));
     }
 
+
+
     @DataTableType
     public OpcionesMenuModel opcionesMenu(Map<String, String> dato) {
         return new OpcionesMenuModel(dato.get("La Tarjeta"), dato.get("Seleccionado"));

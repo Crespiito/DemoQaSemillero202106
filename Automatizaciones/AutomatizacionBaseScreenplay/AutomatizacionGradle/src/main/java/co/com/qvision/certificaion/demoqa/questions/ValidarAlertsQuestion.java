@@ -15,6 +15,7 @@ public class ValidarAlertsQuestion implements Question<String> {
         BrowseTheWeb.as(actor).getDriver().switchTo().alert().accept();
         //Actions a = new Actions(BrowseTheWeb.as(actor).getDriver());
         //a.contextClick(BrowseTheWeb.as(actor).getDriver().findElement(By.xpath("//*[@id='rightClickBtn']"))).perform();
+        //build test --tests runner* aggregate --info
         return texto;
     }
 

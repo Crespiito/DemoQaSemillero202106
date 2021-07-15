@@ -59,7 +59,6 @@ public class MenuPage {
             locatedBy("//span[contains(text(), 'Practice Form')]");
 
 
-
     public static final Target NOMBRE = Target.the("Campo nombre").
             locatedBy("//*[@id='firstName']");
 

@@ -27,6 +27,7 @@ public class BookStoreServicesStepDefintions {
     @Entonces("Valido que en la respuesta el usuario exista")
     public void validoQueEnLaRespuestaElUsuarioExista() {
         OnStage.theActorInTheSpotlight().should(
+
                 ResponseConsequence.seeThatResponse("description",
                         response -> response.statusCode(406))
         );

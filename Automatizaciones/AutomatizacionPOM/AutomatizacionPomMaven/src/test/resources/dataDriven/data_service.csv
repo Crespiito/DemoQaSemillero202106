@@ -1,0 +1,6 @@
+filtro;userName  ;password;code;message;statusCode;
+1;UsuarioQa ;Demo123*;1204;User exists!;406  ;
+2;UsuarioQa ;Demo123*;1204;User exists!;406  ;
+3;UsuarioQa ;Demo123*;1203;User exists!;406  ;
+4;UsuarioQa ;Demo123*;1203;User exists!;406  ;
+5;UsuarioQa ;Demo123*;1203;User exists!;406  ;

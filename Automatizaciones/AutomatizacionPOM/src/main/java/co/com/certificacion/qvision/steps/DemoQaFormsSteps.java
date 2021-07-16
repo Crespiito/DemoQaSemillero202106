@@ -5,6 +5,9 @@ import co.com.certificacion.qvision.pages.interactions.DemoQaFormInteraction;
 import co.com.certificacion.qvision.pages.userinterface.DemoQaFormUI;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
+import org.hamcrest.MatcherAssert;
+
+import static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
 
 public class DemoQaFormsSteps {
 
@@ -17,11 +20,9 @@ public class DemoQaFormsSteps {
     }
 
     @Step
-    public void validarTitulo() {
-       /*
-        MatcherAssert.assertThat("El titulo seleccionado coincide",
-                demoQaGeneralInteractions.obtenerTituloSeleccionado(), sameBeanAs(titulo)
+    public void validarFormulario(FormDataModel option) {
+        MatcherAssert.assertThat("Los datos no coinciden",
+                demoQaForm.obtenerDatosTabla(), sameBeanAs(option).ignoring("genero")
         );
-        */
     }
 }

@@ -2,19 +2,19 @@ package co.com.certificacion.qvision.pages.interactions;
 
 import co.com.certificacion.qvision.models.FormDataModel;
 import co.com.certificacion.qvision.pages.userinterface.DemoQaFormUI;
-import net.serenitybdd.screenplay.actions.Enter;
 import net.thucydides.core.webdriver.javascript.JavascriptExecutorFacade;
+import org.openqa.selenium.Keys;
 
 public class DemoQaFormInteraction extends DemoQaFormUI {
 
     public void enviarFormulario(FormDataModel option) {
         nombre.sendKeys(option.getNombre());
         apellido.sendKeys(option.getApellido());
-        // Enter.keyValues(option.getEmail()).into(email);
         email.sendKeys(option.getEmail());
+        getGender(setGenero(option.getGenero())).click();
         mobile.sendKeys(option.getMobile());
-        getGender("1").click();
-        Enter.keyValues(option.getSubject()).into(subject);
+        subject.sendKeys(option.getSubject());
+        subject.sendKeys(Keys.ENTER);
         currentAddress.sendKeys(option.getCurrentAddress());
 
 

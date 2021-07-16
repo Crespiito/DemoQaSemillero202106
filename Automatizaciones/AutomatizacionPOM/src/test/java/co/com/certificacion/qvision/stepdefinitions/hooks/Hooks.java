@@ -23,23 +23,7 @@ public class Hooks {
         demoQaGeneralSteps.abrirPaginaDemoQa();
     }
 
-    @DataTableType
-    public OpcionesMenuModel opcionesMenu(Map<String, String> dato) {
-        return new OpcionesMenuModel(dato.get("La Tarjeta"), dato.get("Seleccionado"));
-    }
 
-    @DataTableType
-    public FormDataModel formDataModel(Map<String, String> dato) {
-        return new FormDataModel(
-                dato.get("nombre"),
-                dato.get("apellido"),
-                dato.get("email"),
-                dato.get("mobile"),
-                dato.get("genero"),
-                dato.get("subject"),
-                dato.get("currentAddress")
-        );
-    }
 
 
 }

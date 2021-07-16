@@ -29,7 +29,7 @@ public class PracticeFormStepdefinitions {
 
     @Entonces("confirmo si se registra el formulario")
     public void confirmoSiSeRegistraElFormulario(FormDataModel option) {
-        //demoQaGeneralSteps.validarTitulo();
+        demoQaFormsSteps.validarFormulario(option);
 
     }
 

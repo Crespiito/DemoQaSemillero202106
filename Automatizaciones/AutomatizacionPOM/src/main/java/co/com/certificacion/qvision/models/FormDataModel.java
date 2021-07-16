@@ -4,8 +4,8 @@ public class FormDataModel {
     String nombre;
     String apellido;
     String email;
-    String mobile;
     String genero;
+    String mobile;
     String subject;
     String currentAddress;
 
@@ -13,7 +13,7 @@ public class FormDataModel {
     public FormDataModel() {
     }
 
-    public FormDataModel(String nombre, String apellido, String email, String mobile, String genero, String subject, String currentAddress) {
+    public FormDataModel(String nombre, String apellido, String email, String genero, String mobile, String subject, String currentAddress) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;

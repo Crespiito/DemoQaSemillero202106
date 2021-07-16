@@ -21,7 +21,7 @@ public class DemoQaFormUI extends PageObject {
     public WebElementFacade mobile;
 
     public WebElement getGender(String dato) {
-        return getDriver().findElement(By.xpath("//label[contains(@for, 'gender-radio-{"+ dato +"}') and @class='custom-control-label"));
+        return getDriver().findElement(By.xpath("//*[@for='gender-radio-" + dato + "']"));
     }
 
     @FindBy(xpath = "//*[@id='subjectsInput']")
@@ -30,12 +30,12 @@ public class DemoQaFormUI extends PageObject {
     @FindBy(xpath = "//*[@id='currentAddress']")
     public WebElementFacade currentAddress;
 
-    public WebElement  getCampoTabla(String dato1 ,String dato2) {
-        return getDriver().findElement(By.xpath(" //table/tbody/tr["+dato1+"]/td["+dato2+"]"));
+    public WebElement getCampoTabla(String dato1, String dato2) {
+        return getDriver().findElement(By.xpath(" //table/tbody/tr[" + dato1 + "]/td[" + dato2 + "]"));
     }
 
     public WebElement getCampoID(String dato) {
-        return getDriver().findElement(By.xpath("//*[@id='{0}']"));
+        return getDriver().findElement(By.xpath("//*[@id='" + dato + "']"));
     }
 
 }

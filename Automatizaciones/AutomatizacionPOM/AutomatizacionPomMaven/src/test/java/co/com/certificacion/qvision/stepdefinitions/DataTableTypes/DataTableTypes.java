@@ -16,7 +16,7 @@ public class DataTableTypes {
 
     @DataTableType
     public DataServiceModel dataServiceModel(Map<String,String> datos) throws IOException {
-        List<Map<String, String>> map = CsvTransformer.getRowsCsv("servicio", datos.get("filtro")+","+datos.get("valor"));
+        List<Map<String, String>> map = CsvTransformer.getRowsCsv("service", datos.get("filtro")+","+datos.get("valor"));
         return new DataServiceModel(map.get(0).get("userName"),map.get(0).get("password"));
     }
 
@@ -39,7 +39,7 @@ public class DataTableTypes {
 
     @DataTableType
     public BodyUserResponse dataServiceResponse(Map<String,String> datos) throws IOException {
-        List<Map<String, String>> dataMap = CsvTransformer.getRowsCsv("servicio", datos.get("filtro")+","+datos.get("valor"));
+        List<Map<String, String>> dataMap = CsvTransformer.getRowsCsv("service", datos.get("filtro")+","+datos.get("valor"));
         return new BodyUserResponse(dataMap);
     }
 }

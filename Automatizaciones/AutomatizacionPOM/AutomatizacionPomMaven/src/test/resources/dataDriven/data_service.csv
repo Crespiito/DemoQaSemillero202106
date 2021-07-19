@@ -1,4 +1,4 @@
-filtro;userName  ;password;code;message;statusCode;
+filtro; userName  ;password; code; message; statusCode;
 1;UsuarioQa ;Demo123*;1204;User exists!;406  ;
 2;UsuarioQa ;Demo123*;1204;User exists!;406  ;
 3;UsuarioQa ;Demo123*;1203;User exists!;406  ;

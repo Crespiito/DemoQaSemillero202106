@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/forms/practiceForm.feature",
-       // glue = "co.com.certificacion.qvision.stepdefinitions",
-        glue ={"co.com.certificacion.qvision.stepdefinitions.services","co.com.certificacion.qvision.stepdefinitions.hooks"},
+        glue = "co.com.certificacion.qvision.stepdefinitions",
+        //glue ={"co.com.certificacion.qvision.stepdefinitions.forms","co.com.certificacion.qvision.stepdefinitions.hooks"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 
 )
